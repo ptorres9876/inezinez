@@ -1,0 +1,87 @@
+/*estilos del home*/
+
+/* default*/
+html
+{
+    background: url(../../resources/img/welcome_fondo-01.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+@media only screen and (max-width: 320px) {
+    /* Small screen, non-retina */
+    body { background-image: url(""); }
+}
+
+@media
+only screen and (min-resolution: 2dppx) and (max-width: 320px) {
+    /* Small screen, retina */
+    body { background-image: url(""); }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 538px) {
+    /* Medium screen, non-retina */
+    body { background-image: url(""); }
+}
+
+@media
+only screen and (min-resolution: 2dppx) and (min-width: 321px) and (max-width: 538px) {
+    /* Medium screen, retina */
+    body { background-image: url(""); }
+}
+
+@media
+only screen and (min-resolution: 2dppx) and (min-width: 539px) {
+    /* Large screen, retina */
+    body { background-image: url(""); }
+    
+}
+
+html,
+body 
+{
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+#test
+{
+    position: relative;
+    /*border:1px solid;*/
+    height: 75%;
+    top:25%;
+    overflow: hidden;
+}
+
+#test img 
+{
+    position: absolute;
+}
+
+.link-center
+{
+    position: absolute;
+    left: 50%;
+    top:30%;
+    margin-left: -50px;
+    margin-top: -25px;
+    color: gray;
+    font-family: "Lucida Sans Unicode";
+    font-size: 15pt;
+    font-weight: 200;
+    z-index: 1;
+}
+
+a:hover
+{
+    font-size: 16pt;
+}
+
+a:visited , a:active, a:link, a
+{
+    color:darkgray;
+}

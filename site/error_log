@@ -1,0 +1,16 @@
+[27-Mar-2015 01:10:00 America/Denver] PHP Warning:  include_once(../cms/conexion_db.php): failed to open stream: No such file or directory in /home2/bosccomm/public_html/blog-inez/Desarrollo/home/home.php on line 5
+[27-Mar-2015 01:10:00 America/Denver] PHP Warning:  include_once(): Failed opening '../cms/conexion_db.php' for inclusion (include_path='.:/usr/php/54/usr/lib64:/usr/php/54/usr/share/pear') in /home2/bosccomm/public_html/blog-inez/Desarrollo/home/home.php on line 5
+[27-Mar-2015 01:39:56 America/Denver] PHP Fatal error:  Call to undefined method dataRecovery::setImgPath() in /home2/bosccomm/public_html/blog-inez/Desarrollo/home/home.php on line 214
+[27-Mar-2015 01:42:52 America/Denver] PHP Fatal error:  Call to undefined method dataRecovery::setImgPath() in /home2/bosccomm/public_html/blog-inez/Desarrollo/home/home.php on line 214
+[27-Mar-2015 01:42:58 America/Denver] PHP Fatal error:  Call to undefined method dataRecovery::setImgPath() in /home2/bosccomm/public_html/blog-inez/Desarrollo/home/home.php on line 214
+[27-Mar-2015 01:44:54 America/Denver] PHP Fatal error:  Call to undefined method dataRecovery::setImgPath() in /home2/bosccomm/public_html/blog-inez/Desarrollo/home/home.php on line 214
+[27-Mar-2015 01:45:37 America/Denver] PHP Fatal error:  Call to undefined method dataRecovery::setImgPath() in /home2/bosccomm/public_html/blog-inez/Desarrollo/home/home.php on line 214
+[27-Mar-2015 01:48:32 America/Denver] PHP Fatal error:  Call to undefined method dataRecovery::setImgPath() in /home2/bosccomm/public_html/blog-inez/Desarrollo/home/home.php on line 214
+[27-Mar-2015 01:50:42 America/Denver] PHP Fatal error:  Call to undefined method dataRecovery::setImgPath() in /home2/bosccomm/public_html/blog-inez/Desarrollo/home/home.php on line 215
+[27-Mar-2015 01:55:05 America/Denver] PHP Fatal error:  Call to undefined method dataRecovery::setImgPath() in /home2/bosccomm/public_html/blog-inez/Desarrollo/home/home.php on line 215
+[27-Mar-2015 01:56:05 America/Denver] PHP Fatal error:  Call to undefined method dataRecovery::setImgPath() in /home2/bosccomm/public_html/blog-inez/Desarrollo/home/home.php on line 215
+[27-Mar-2015 02:00:14 America/Denver] PHP Notice:  Undefined property: dataRecovery::$id in /home2/bosccomm/public_html/blog-inez/Desarrollo/cms/articles.php on line 89
+[27-Mar-2015 02:13:26 America/Denver] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home2/bosccomm/public_html/blog-inez/Desarrollo/cms/articles.php on line 105
+[27-Mar-2015 02:13:46 America/Denver] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home2/bosccomm/public_html/blog-inez/Desarrollo/cms/articles.php on line 105
+[27-Mar-2015 02:23:34 America/Denver] PHP Fatal error:  Call to a member function writeTitle() on a non-object in /home2/bosccomm/public_html/blog-inez/Desarrollo/home/home.php on line 198
+[27-Mar-2015 02:25:04 America/Denver] PHP Fatal error:  Call to a member function writeTitle() on a non-object in /home2/bosccomm/public_html/blog-inez/Desarrollo/home/home.php on line 198

@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>javascript - How can I detect window size with jQuery? - Stack Overflow</title>
+    <link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico?v=6cd6089ee7f6">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png?v=41f6e13ade69">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=ea71a5211a91">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="How can I detect window size with jQuery?">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="How can I detect window/browser size with jQuery like Gmail? In Gmail, we don&#39;t need to refresh or reload current page as soon as we have changed window resolution in window setting? In my project, I ">
+    <meta property="og:url" content="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery">
+    <link rel="canonical" href="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/javascript - How can I detect window size with jQuery  - Stack Overflow.html">
+
+    
+    
+    <script type="text/javascript" async="" src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/ados"></script><script async="" src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/quant.js"></script><script async="" src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/beacon.js"></script><script async="" src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/analytics.js"></script><script type="text/javascript" async="" src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/ados.js"></script><script src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/jquery.min.js"></script>
+    <script src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/stub.en.js"></script>
+    <link rel="stylesheet" type="text/css" href="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/all.css">
+    
+    <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;How can I detect window size with jQuery?&#39;" href="http://stackoverflow.com/feeds/question/7789043">
+    <meta name="twitter:app:country" content="US">
+    <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+    <meta name="twitter:app:id:iphone" content="871299723">
+    <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery">
+    <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+    <meta name="twitter:app:id:ipad" content="871299723">
+    <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery">
+    <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+    <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery">
+    <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+    <script>
+        
+        StackExchange.ready(function () {
+                
+                StackExchange.using("snippets", function () {
+                    StackExchange.snippets.initSnippetRenderer();
+                });
+                
+
+            StackExchange.using("postValidation", function () {
+                StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+            });
+
+            
+            StackExchange.question.init({showAnswerHelp:true,totalCommentCount:2,shownCommentCount:2,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:7789043});
+
+            styleCode();
+
+                StackExchange.realtime.subscribeToQuestion('1', '7789043');
+                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+        });
+    </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","serverTime":1426822463,"networkMetaHostname":"meta.stackexchange.com","routeName":"Questions/Show","styleCode":true,"enableUserHovercards":true,"snippets":{"enabled":true,"domain":"stacksnippets.net"},"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"nonAsciiTags":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"464a5481a5fd84efbcb48baff76a9843","isAnonymous":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"b578a5f37af2","js/moderator.en.js":"f97bdb3baa45","js/full-anon.en.js":"4709568c8cea","js/full.en.js":"9a0cdd3670a7","js/wmd.en.js":"b06a8a8469d5","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"b27d14d96d70","js/help.en.js":"d9d907e73446","js/tageditor.en.js":"9c54855bf167","js/tageditornew.en.js":"953d2cecbdbd","js/inline-tag-editing.en.js":"49f7375eb68e","js/revisions.en.js":"989c474e85a9","js/review.en.js":"011e8a1ebf3f","js/tagsuggestions.en.js":"bb4721d888d2","js/post-validation.en.js":"5f888917f392","js/explore-qlist.en.js":"257ba4cb7b04","js/events.en.js":"b0c288618df4","js/keyboard-shortcuts.en.js":"eb926d7fe0e6","js/external-editor.en.js":"b04e37426de6","js/external-editor.en.js":"b04e37426de6","js/snippet-javascript.en.js":"0a1fe2946ff5","js/snippet-javascript-codemirror.en.js":"737a7e299372"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+    
+    
+<script async="" src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/full-anon.en.js"></script><script async="" src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/snippet-javascript.en.js"></script><script async="" src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/post-validation.en.js"></script><script async="" src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/prettify-full.en.js"></script><script async="" src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/external-editor.en.js"></script><script type="text/javascript" src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/adFeedback.js"></script><link rel="stylesheet" href="http://static.adzerk.net/Extensions/adFeedback.css"></head>
+<body class="question-page new-topbar">
+    <noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="http://stackoverflow.com/">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+                    <a href="http://blog.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:7 })">blog</a>
+            </div>
+
+
+
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="
+            site.switch({ target_site:552, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                </li>
+                            <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    <a class="site-link js-gps-track" href="http://careers.stackoverflow.com/?utm_source=stackoverflow.com&utm_medium=site-ui&utm_campaign=multicollider" data-gps-track="site_switcher.click({ item_type:9 })">
+                        <div class="site-icon favicon favicon-careers" title="Stack Overflow Careers"></div>
+                        Stack Overflow Careers
+                    </a>
+                </li>
+        </ul>
+    </div>
+    
+    <div class="header" id="your-communities-header">
+        <h3>
+your communities        </h3>
+            
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f7789043%2fhow-can-i-detect-window-size-with-jquery" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://stackoverflow.com/users/login?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f7789043%2fhow-can-i-detect-window-size-with-jquery" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+            </div>
+    </div>
+    
+    <div class="header">
+        <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a></h3>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+
+            <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 138 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                <span class="topbar-menu-links">
+                                <a href="https://stackoverflow.com/users/signup?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f7789043%2fhow-can-i-detect-window-size-with-jquery" class="login-link">sign up</a>
+                                <a href="https://stackoverflow.com/users/login?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f7789043%2fhow-can-i-detect-window-size-with-jquery" class="login-link">log in</a>
+
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                            <a href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                            <a href="http://careers.stackoverflow.com/?utm_source=stackoverflow.com&utm_medium=site-ui&utm_campaign=anon-topbar">stack overflow careers</a>
+                    </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="http://stackoverflow.com/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="search" value="" tabindex="1" autocomplete="off" maxlength="240">
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                        <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://stackoverflow.com/help/badges">Badges</a></li>
+                        <li><a id="nav-unanswered" href="http://stackoverflow.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content" class="snippet-hidden">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+	<link itemprop="image" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+			<!--googleoff: all-->
+
+<div id="herobox-mini">
+    <div id="hero-content">
+        <span id="controls">
+            <a href="http://stackoverflow.com/tour" id="tell-me-more" class="button">Take the 2-minute tour</a>
+            <span id="close"><a title="click to dismiss">×</a></span>
+        </span>
+        <div id="blurb">
+            Stack Overflow is a question and answer site for professional and enthusiast programmers. It's 100% free, no registration required.
+        </div>        
+    </div>
+    <script>
+        $('#tell-me-more').click(function () {
+            var clickSource = $("body").attr("class") + '-mini';
+            if ($("body").hasClass("questions-page")) {
+                clickSource = 'questionpagemini';
+            } else if ($("body").hasClass("question-page")) {
+                clickSource = 'questionpagemini';
+            } else if ($("body").hasClass("home-page")) {
+                clickSource = 'homepagemini';
+            }
+
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("aboutpage.click", { aboutclick_location: clickSource } , true);
+            });
+        });
+        $('#herobox-mini #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "close" }, true);
+            });
+            $.cookie("hero", "none", { path: "/", expires: 365 });
+            var $hero = $("#herobox-mini");
+            $hero.slideUp('fast', function () { $hero.remove(); });
+            return false;
+        });
+    </script>
+</div>
+			<!--googleon: all-->
+			<div id="question-header">
+			<h1 itemprop="name"><a href="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/javascript - How can I detect window size with jQuery  - Stack Overflow.html" class="question-hyperlink">How can I detect window size with jQuery?</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="7789043" id="question">
+
+    <script>
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk1749567051",4).setZone(43) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1749567051"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjoxODY2MjQsImNoIjoxMTc4LCJjciI6Njg0MjgyLCJkaSI6IjBkMjg4NTNlNzBiYjRmOWQ5OWJkOWY0OWVhNjVhNGU4IiwiZG0iOjEsImZjIjo3MDg0MzYsImZsIjo0MzE3ODAsImlwIjoiMTg5LjIxNy4xMzguMTYwIiwia3ciOiJqYXZhc2NyaXB0LGpxdWVyeSIsIm53IjoyMiwicGMiOjAsInByIjoxNjA0LCJydCI6MSwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLm14LyIsInN0Ijo4Mjc3LCJ1ayI6InVlMS1jYzE2MzAwOWM2MDk0MzRiYTQ3YjBmOGNiMTNkYjQzMyIsInpuIjo0MywidHMiOjE0MjY4MjI0NjQ0NzksImJmIjp0cnVlLCJwbiI6ImFkemVyazE3NDk1NjcwNTEiLCJ1ciI6Imh0dHA6Ly9jYXJlZXJzLnN0YWNrb3ZlcmZsb3cuY29tL3Byb2R1Y3RzP3V0bV9zb3VyY2U9c3RhY2tvdmVyZmxvdy5jb20mdXRtX21lZGl1bT1hZCZ1dG1fY2FtcGFpZ249ZW1wbG95ZXJzLXN1cGVyaGVyb2VzJnV0bV9jb250ZW50PWxiLXN1cGVyaGVyb2VzIn0&s=8Bvnp_t-I3DKs4PvblQyY_77TG0" rel="nofollow" target="_blank" title=""><img src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/7b03b9d327834757b98b657002b37789.png" title="" alt="" border="0" width="728" height="90"></a><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/i.gif"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="7789043">
+    <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">22</span>
+    <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+    
+    <a class="star-off" href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery#" title="This is a favorite question (click again to undo)">favorite</a>
+    <div class="favoritecount"><b>8</b></div>   
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+        <p>How can I detect window/browser size with jQuery like Gmail? In Gmail, we don't need to refresh or reload current page as soon as we have changed window resolution in window setting? In my project, I need to refresh the browser as soon as window setting has been changed.</p>
+
+<p>Any idea will be appreciated.</p>
+
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/javascript" class="post-tag js-gps-track" title="show questions tagged &#39;javascript&#39;" rel="tag">javascript</a> <a href="http://stackoverflow.com/questions/tagged/jquery" class="post-tag js-gps-track" title="show questions tagged &#39;jquery&#39;" rel="tag">jquery</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/7789043" title="short permalink to this question" class="short-link" id="link-post-7789043">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/7789043/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/7789043/revisions" title="show all edits to this post">edited <span title="2011-10-17 05:20:50Z" class="relativetime">Oct 17 '11 at 5:20</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/513404/vietean"><div class="gravatar-wrapper-32"><img src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/761132af7b420f09832b5336457573fc" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/513404/vietean">vietean</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">848</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="21 silver badges"><span class="badge2"></span><span class="badgecount">21</span></span><span title="46 bronze badges"><span class="badge3"></span><span class="badgecount">46</span></span>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2011-10-17 03:16:55Z" class="relativetime">Oct 17 '11 at 3:16</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2555911/ppshein"><div class="gravatar-wrapper-32"><img src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/BYQsZ.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2555911/ppshein">ppshein</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">2,110</span><span title="11 gold badges"><span class="badge1"></span><span class="badgecount">11</span></span><span title="35 silver badges"><span class="badge2"></span><span class="badgecount">35</span></span><span title="70 bronze badges"><span class="badge3"></span><span class="badgecount">70</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-7789043" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-9487193" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I think that we can not. But we can get size of window by use: <code>document.body.clientWidth/clientHeight</code></span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/513404/vietean" title="848 reputation" class="comment-user">vietean</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery#comment9487193_7789043"><span title="2011-10-17 03:22:17Z" class="relativetime-clean">Oct 17 '11 at 3:22</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-9487201" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Update: I am wrong. You can screen.width and screen.height</span>
+                –&nbsp;
+                    <a href="http://stackoverflow.com/users/513404/vietean" title="848 reputation" class="comment-user">vietean</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery#comment9487201_7789043"><span title="2011-10-17 03:23:46Z" class="relativetime-clean">Oct 17 '11 at 3:23</span></a></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-7789043" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery#" onclick=""></a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								6 Answers
+                                <span style="display:none;" itemprop="answerCount">6</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery?answertab=active#tab-top" title="Answers with the latest activity first">active</a>
+        <a href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery?answertab=oldest#tab-top" title="Answers in the order they were provided">oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery?answertab=votes#tab-top" title="Answers with the highest score first">votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="7789096"></a>
+<div id="answer-7789096" class="answer accepted-answer" data-answerid="7789096" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="7789096">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">39</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="The question owner accepted this as the best answer Oct 17 &#39;11 at 5:32.">accepted</span>
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You cannot really find the display resolution from a web page. There <em>is</em> a CSS Media Queries statement for it, but it is poorly implemented in most devices and browsers, if at all. However, you do not need to know the resolution of the display, because changing it causes the (pixel) width of the window to change, which <em>can</em> be detected using the methods others have described:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="pln">$</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">resize</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">// This will execute whenever the window is resized</span><span class="pln">
+  $</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">height</span><span class="pun">();</span><span class="pln"> </span><span class="com">// New height</span><span class="pln">
+  $</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">width</span><span class="pun">();</span><span class="pln"> </span><span class="com">// New width</span><span class="pln">
+</span><span class="pun">});</span></code></pre>
+
+<p>You can also use CSS Media Queries in browsers that support them to adapt your page's style to various display widths, but you should really be using <code>em</code> units and percentages and <code>min-width</code> and <code>max-width</code> in your CSS if you want a proper flexible layout. Gmail probably uses a combination of all these.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/7789096" title="short permalink to this answer" class="short-link" id="link-post-7789096">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/7789096/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/7789096/revisions" title="show all edits to this post">edited <span title="2013-10-28 08:47:20Z" class="relativetime">Oct 28 '13 at 8:47</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        <br>
+        
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2011-10-17 03:31:57Z" class="relativetime">Oct 17 '11 at 3:31</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/231788/f%c3%a9lix-saparelli"><div class="gravatar-wrapper-32"><img src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/a794d473626fc9d329a035c38e2fb832" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/231788/f%c3%a9lix-saparelli">Félix Saparelli</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">3,607</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="22 silver badges"><span class="badge2"></span><span class="badgecount">22</span></span><span title="50 bronze badges"><span class="badge3"></span><span class="badgecount">50</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-7789096" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-7789096" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+<script>
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk946934031",4).setZone(44) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk946934031"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjoxODY2MjQsImNoIjoxMTc4LCJjciI6NzIyNjgyLCJkaSI6IjliMjk3NjA4ZTllODRkYjA5MzBlMmM3Yjc0NjhkZmNlIiwiZG0iOjEsImZjIjo3NTIyNDEsImZsIjo0NDEzMzQsImlwIjoiMTg5LjIxNy4xMzguMTYwIiwia3ciOiJqYXZhc2NyaXB0LGpxdWVyeSIsIm53IjoyMiwicGMiOjAsInByIjoxNTY4LCJydCI6MSwicmYiOiJodHRwczovL3d3dy5nb29nbGUuY29tLm14LyIsInN0Ijo4Mjc3LCJ1ayI6InVlMS1jYzE2MzAwOWM2MDk0MzRiYTQ3YjBmOGNiMTNkYjQzMyIsInpuIjo0NCwidHMiOjE0MjY4MjI0NjQ0ODIsImJmIjp0cnVlLCJwbiI6ImFkemVyazk0NjkzNDAzMSIsInVyIjoiaHR0cDovL2NhcmVlcnMuc3RhY2tvdmVyZmxvdy5jb20vY3YvZ2V0LW9uZT91dG1fc291cmNlPXN0YWNrb3ZlcmZsb3cuY29tJnV0bV9tZWRpdW09YWQmdXRtX2NhbXBhaWduPWNhbmRpZGF0ZXMtYWRkLWN2JnV0bV9jb250ZW50PWxiLWJpcmRzIn0&s=Xo5yj7tOzsNxOtfuBdUu1BvCTiw" rel="nofollow" target="_blank" title=""><img src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/7fcccaae8acb4e2e84bb7ea421d299ce.jpg" title="" alt="" border="0" width="728" height="90"></a><div class="adzerk-vote-controls" style="display:none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/i(1).gif"></div>
+  
+<a name="7789056"></a>
+<div id="answer-7789056" class="answer" data-answerid="7789056" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="7789056">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">5</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Do you want to detect when the window has been resized?</p>
+
+<p>You can use JQuery's <a href="http://api.jquery.com/resize/">resize</a> to attach a handler.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/7789056" title="short permalink to this answer" class="short-link" id="link-post-7789056">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/7789056/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2011-10-17 03:22:26Z" class="relativetime">Oct 17 '11 at 3:22</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/148412/aneves"><div class="gravatar-wrapper-32"><img src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/c8285f0fd1d23c011ab2d03c55a2d219" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/148412/aneves">ANeves</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">2,951</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="11 silver badges"><span class="badge2"></span><span class="badgecount">11</span></span><span title="36 bronze badges"><span class="badge3"></span><span class="badgecount">36</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-7789056" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-7789056" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="7789061"></a>
+<div id="answer-7789061" class="answer" data-answerid="7789061" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="7789061">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">4</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You can get the values for the width and height of the browser using the following:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="pln">$</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">height</span><span class="pun">();</span><span class="pln">
+$</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">width</span><span class="pun">();</span></code></pre>
+
+<p>To get notified when the browser is resized, use this bind callback:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="pln">$</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">resize</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="com">// Do something</span><span class="pln">
+</span><span class="pun">});</span></code></pre>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/7789061" title="short permalink to this answer" class="short-link" id="link-post-7789061">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/7789061/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2011-10-17 03:24:23Z" class="relativetime">Oct 17 '11 at 3:24</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/998395/cocoahero"><div class="gravatar-wrapper-32"><img src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/a5c064ac08adcc82e8d6dfee14900e3c" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/998395/cocoahero">cocoahero</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,110</span><span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span><span title="11 bronze badges"><span class="badge3"></span><span class="badgecount">11</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-7789061" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-7789061" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="7789055"></a>
+<div id="answer-7789055" class="answer" data-answerid="7789055" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="7789055">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<pre class="default prettyprint prettyprinted"><code><span class="com">//get dimensions </span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> height </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">height</span><span class="pun">();</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> width </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">width</span><span class="pun">();</span><span class="pln">
+
+</span><span class="com">//refresh on resize</span><span class="pln">
+$</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">resize</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  location</span><span class="pun">.</span><span class="pln">reload</span><span class="pun">(</span><span class="kwd">true</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">});</span></code></pre>
+
+<p>not sure if you wanted to tinker with the dimensions of elements our actually refresh the page. so here a bunch of different things pick what you want.  you can even put the height and width in the resize event if you really wanted.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/7789055" title="short permalink to this answer" class="short-link" id="link-post-7789055">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/7789055/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="http://stackoverflow.com/posts/7789055/revisions" title="show all edits to this post">edited <span title="2011-10-17 03:27:49Z" class="relativetime">Oct 17 '11 at 3:27</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        <br>
+        
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2011-10-17 03:22:13Z" class="relativetime">Oct 17 '11 at 3:22</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/634196/richard-andrew-lee"><div class="gravatar-wrapper-32"><img src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/415e99df3f55f7ce11468b5120188d71" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/634196/richard-andrew-lee">Richard Andrew Lee</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">920</span><span title="4 silver badges"><span class="badge2"></span><span class="badgecount">4</span></span><span title="7 bronze badges"><span class="badge3"></span><span class="badgecount">7</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-7789055" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-7789055" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="25360765"></a>
+<div id="answer-25360765" class="answer" data-answerid="25360765" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="25360765">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You make one div somewhere on the page and put this code:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"winSize"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;script&gt;</span><span class="pln">
+    </span><span class="kwd">var</span><span class="pln"> </span><span class="typ">WindowsSize</span><span class="pun">=</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+        </span><span class="kwd">var</span><span class="pln"> h</span><span class="pun">=</span><span class="pln">$</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">height</span><span class="pun">(),</span><span class="pln">
+            w</span><span class="pun">=</span><span class="pln">$</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">width</span><span class="pun">();</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"#winSize"</span><span class="pun">).</span><span class="pln">html</span><span class="pun">(</span><span class="str">"&lt;p&gt;Width: "</span><span class="pun">+</span><span class="pln">w</span><span class="pun">+</span><span class="str">"&lt;br&gt;Height:"</span><span class="pun">+</span><span class="pln">h</span><span class="pun">+</span><span class="str">"&lt;/p&gt;"</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">};</span><span class="pln">
+   $</span><span class="pun">(</span><span class="pln">document</span><span class="pun">).</span><span class="pln">ready</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="typ">WindowsSize</span><span class="pun">();});</span><span class="pln"> 
+   $</span><span class="pun">(</span><span class="pln">window</span><span class="pun">).</span><span class="pln">resize</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="typ">WindowsSize</span><span class="pun">();});</span><span class="pln"> 
+</span><span class="tag">&lt;/script&gt;</span></code></pre>
+
+<p>Of course, adapt it to your needs. ;)</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/25360765" title="short permalink to this answer" class="short-link" id="link-post-25360765">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/25360765/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-08-18 10:05:44Z" class="relativetime">Aug 18 '14 at 10:05</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/2592415/ivijan-stefan-stipi%c4%87"><div class="gravatar-wrapper-32"><img src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/f326e1b42fb6eda16f6d8499a7fd559f" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/2592415/ivijan-stefan-stipi%c4%87">Ivijan Stefan Stipić</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">316</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="3 silver badges"><span class="badge2"></span><span class="badgecount">3</span></span><span title="19 bronze badges"><span class="badge3"></span><span class="badgecount">19</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-25360765" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-25360765" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+
+  
+<a name="21743222"></a>
+<div id="answer-21743222" class="answer" data-answerid="21743222" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input type="hidden" name="_id_" value="21743222">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>You could also use plain Javascript <code>window.innerWidth</code> to compare width. </p>
+
+<p>But use jQuery's <code>.resize()</code> fired automatically for you:</p>
+
+<pre class="default prettyprint prettyprinted"><code><span class="pln">$</span><span class="pun">(</span><span class="pln"> window </span><span class="pun">).</span><span class="pln">resize</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">// your code...</span><span class="pln">
+</span><span class="pun">});</span><span class="pln"> </span></code></pre>
+
+<p><a href="http://api.jquery.com/resize/" rel="nofollow">http://api.jquery.com/resize/</a></p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/21743222" title="short permalink to this answer" class="short-link" id="link-post-21743222">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/21743222/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2014-02-13 00:59:31Z" class="relativetime">Feb 13 '14 at 0:59</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/958584/bradley-flood"><div class="gravatar-wrapper-32"><img src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/yfkeO.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/958584/bradley-flood">Bradley Flood</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">999</span><span title="7 silver badges"><span class="badge2"></span><span class="badgecount">7</span></span><span title="18 bronze badges"><span class="badge3"></span><span class="badgecount">18</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-21743222" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-21743222" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="http://stackoverflow.com/questions/7789043/answer/submit" method="post" class="post-form">
+						    <input type="hidden" id="post-id" value="7789043">
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false">
+                            <input type="hidden" name="referrer" value="https://www.google.com.mx/">
+							<h2 class="space">Your Answer</h2>
+
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+            // Have to fire editor after snippets, if snippets enabled
+            if (StackExchange.options.snippets.enabled) {
+                StackExchange.using("snippets", function() {
+                    createEditor();
+                });
+            }
+            else {
+                createEditor();
+            }
+        });
+
+        function createEditor() {
+            prepareEditor({
+                heartbeatType: 'answer',
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                ,immediatelyShowMarkdownHelp:true
+                });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="464a5481a5fd84efbcb48baff76a9843">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="http://stackoverflow.com/users/login?returnurl=%2fquestions%2f7789043%2fhow-can-i-detect-window-size-with-jquery%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Stack Exchange</span></p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid">
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false">
+                    <input type="hidden" name="use-google" class="use-google" value="false">
+                    <input type="button" class="submit-openid" value="Submit" style="display:none">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', '%2fquestions%2f7789043%2fhow-can-i-detect-window-size-with-jquery%23new-answer');
+                    }
+                );
+            </script>
+            <noscript>
+                        &lt;h3&gt;Post as a guest&lt;/h3&gt;
+    &lt;div class="form-item"&gt;
+        &lt;table&gt;
+        &lt;tr&gt;
+                    &lt;td class="vm"&gt;
+                &lt;div&gt;
+                    &lt;label for="display-name"&gt;Name&lt;/label&gt;
+                    &lt;input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for="m-address"&gt;Email&lt;/label&gt;
+                    &lt;input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" /&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+            </noscript>
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+									<a href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery#" class="discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_blank">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_blank">terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1">								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/javascript" class="post-tag" title="show questions tagged &#39;javascript&#39;" rel="tag">javascript</a> <a href="http://stackoverflow.com/questions/tagged/jquery" class="post-tag" title="show questions tagged &#39;jquery&#39;" rel="tag">jquery</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2011-10-17 03:16:55Z"><b>3 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>59593 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery?lastactivity" class="lastactivity-link" title="2014-08-18 10:05:44Z">7 months ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+						
+			<script>
+                var ados = ados || {};ados.run = ados.run || [];
+                ados.run.push(function() { ados_add_placement(22,8277,"adzerk796368293",[17,2221]).setZone(45) ; });                    
+            </script>
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk796368293"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MTcsImJ0IjowLCJjbSI6MTg2NjI0LCJjaCI6MTE3OCwiY3IiOjY2Mjc5NSwiZGkiOiI5MjQ5M2Y0ZTAzZTM0YTliOTM4MWI4YjVjOGM0Mzk3ZCIsImRtIjoxLCJmYyI6Njg0NTIxLCJmbCI6NDEwMTgzLCJpcCI6IjE4OS4yMTcuMTM4LjE2MCIsImt3IjoiamF2YXNjcmlwdCxqcXVlcnkiLCJudyI6MjIsInBjIjowLCJwciI6MTU2OCwicnQiOjEsInJmIjoiaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS5teC8iLCJzdCI6ODI3NywidWsiOiJ1ZTEtY2MxNjMwMDljNjA5NDM0YmE0N2IwZjhjYjEzZGI0MzMiLCJ6biI6NDUsInRzIjoxNDI2ODIyNDY0NDg0LCJiZiI6dHJ1ZSwicG4iOiJhZHplcms3OTYzNjgyOTMiLCJ1ciI6Imh0dHA6Ly9jYXJlZXJzLnN0YWNrb3ZlcmZsb3cuY29tL3Byb2R1Y3RzP3V0bV9zb3VyY2U9c3RhY2tvdmVyZmxvdy5jb20mdXRtX21lZGl1bT1hZCZ1dG1fY2FtcGFpZ249ZW1wbG95ZXJzLXN1cGVyaGVyb2VzJnV0bV9jb250ZW50PXNiLXN1cGVyaGVyb2VzIn0&s=U9o1jdWCSuuahuuyz69PlqsUhas" rel="nofollow" target="_blank" title=""><img src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/d936d243e9de4c989a6c95b031eb11d6.png" title="" alt="" border="0" width="220" height="250"></a><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display:none;"><form><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input type="radio" value="12" name="downvoteReason">Uninteresting</label></li><li><label><input type="radio" value="13" name="downvoteReason">Misleading</label></li><li><label><input type="radio" value="14" name="downvoteReason">Offensive</label></li><li><label><input type="radio" value="15" name="downvoteReason">Repetitive</label></li><li><label><input type="radio" value="16" name="downvoteReason">Other</label></li></ul><a href="http://stackoverflow.com/questions/7789043/how-can-i-detect-window-size-with-jquery#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img height="0px" width="0px" border="0" style="position:absolute;" src="./javascript - How can I detect window size with jQuery  - Stack Overflow_files/i(2).gif"></div>  
+        <div id="hireme">
+            <script>
+;(function(e){var a=window.$,p=window.StackExchange,f=100,c="div#hireme,div.hireme",g=decodeURIComponent,i=encodeURIComponent,r=setTimeout,h=document,q,b,m={},l=location.hash;if(l.length>1){l.substr(1).split("&").forEach(function(t){var u=t.split("=");this[g(u[0])]=g(u[1])},m)}b=m.ac||m.accountid||(p&&p.options&&p.options.user&&p.options.user.accountId);if(b){m.ac=b}if(!m.tags){q=a(".post-taglist .post-tag").map(function(){return a(this).text()});if(q.length>0){m.tags=Array.prototype.join.call(q,";")}}if(l==="#large"){m.l=1}if(l==="#abort"){m.abort=1}function j(t){return a(t).html().replace(/\s+/g,"").length>0}function s(){var t=a("#sidebar [id^='adzerk'].everyonelovesstackoverflow");if(t.length===0){return true}return !j(t)}function n(){var t=a(c);if(t.length>0){if(m.l||a("#careersadsdoublehigh").length>0){m.l=1}var v=t.map(function(z,y){return"d="+y.id}).get().join("&");var x=["l","ip","ac","eng","prov","tags","theme"];var u=Object.keys(m).filter(function(y){return x.indexOf(y)!==-1}).map(function(y){return i(y)+"="+i(m[y])}).join("&");if(u){v+="&"+u}var w=h.createElement("script");w.type="text/javascript";w.src=e+(e.indexOf("?")===-1?"?":"&")+v;h.body.appendChild(w)}}function o(){if(s()){d=r(o,f);return}if(m.abort){k()}n()}function k(){clearTimeout(d);a(c).each(function(){var t=a(this);if(!j(t)){var v=t;var u=t.parents(".everyonelovesstackoverflow").first();if(u.length>0){v=u}v.remove()}})}r(k,2000);var d=r(o,f)}).apply(null, ["//clc.stackoverflow.com/j/p"]);            </script>
+        </div>
+			  
+    
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+<div class="spacer">
+	<a href="http://stackoverflow.com/q/17182822?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/17182822/how-to-resize-image-as-we-resize-browser-window?lq=1" class="question-hyperlink">how to resize image as we resize browser window</a>
+</div><div class="spacer">
+	<a href="http://stackoverflow.com/q/24274381?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/24274381/making-sticky-sidebar-responsive?lq=1" class="question-hyperlink">Making sticky sidebar responsive?</a>
+</div><div class="spacer">
+	<a href="http://stackoverflow.com/q/16634573?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+	</a>
+	<a href="http://stackoverflow.com/questions/16634573/how-to-place-a-div-in-a-way-the-user-always-needs-to-scroll-to-see-it?lq=1" class="question-hyperlink">How to place a div in a way the user always needs to scroll to see it?</a>
+</div>			</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/31044?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted extra-large">1003
+    </div>
+</a><a href="http://stackoverflow.com/questions/31044/is-there-an-exists-function-for-jquery?rq=1" class="question-hyperlink">Is there an “exists” function for jQuery?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/152975?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted large">817
+    </div>
+</a><a href="http://stackoverflow.com/questions/152975/how-to-detect-a-click-outside-an-element?rq=1" class="question-hyperlink">How to detect a click outside an element?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/166221?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes extra-large">1387
+    </div>
+</a><a href="http://stackoverflow.com/questions/166221/how-can-i-upload-files-asynchronously?rq=1" class="question-hyperlink">How can I upload files asynchronously?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/171027?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted extra-large">1151
+    </div>
+</a><a href="http://stackoverflow.com/questions/171027/add-table-row-in-jquery?rq=1" class="question-hyperlink">Add table row in jQuery</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/503093?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted extra-large">3299
+    </div>
+</a><a href="http://stackoverflow.com/questions/503093/how-can-i-make-a-redirect-page-using-jquery?rq=1" class="question-hyperlink">How can I make a redirect page using jQuery?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/901115?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted extra-large">2708
+    </div>
+</a><a href="http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript?rq=1" class="question-hyperlink">How can I get query string values in JavaScript?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/979662?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted large">269
+    </div>
+</a><a href="http://stackoverflow.com/questions/979662/how-to-detect-pressing-enter-on-keyboard-using-jquery?rq=1" class="question-hyperlink">How to detect pressing enter on keyboard using jquery?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/1789945?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted extra-large">2838
+    </div>
+</a><a href="http://stackoverflow.com/questions/1789945/how-can-i-check-if-one-string-contains-another-substring?rq=1" class="question-hyperlink">How can I check if one string contains another substring?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/5404839?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted large">816
+    </div>
+</a><a href="http://stackoverflow.com/questions/5404839/how-can-i-refresh-a-page-with-jquery?rq=1" class="question-hyperlink">How can I refresh a page with jQuery?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/14994391?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted extra-large">4038
+    </div>
+</a><a href="http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background?rq=1" class="question-hyperlink">“Thinking in AngularJS” if I have a jQuery background?</a>
+</div>
+
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-matheducators" title="Mathematics Educators Stack Exchange"></div><a href="http://matheducators.stackexchange.com/questions/7650/is-there-a-framework-to-study-the-mathematical-competence-in-problem-posing" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:548 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a framework to study the mathematical competence in problem-posing?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-boardgames" title="Board &amp; Card Games Stack Exchange"></div><a href="http://boardgames.stackexchange.com/questions/23464/gleemax-interactions" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:147 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Gleemax interactions
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/233981/wedge-and-vee-juxtaposed-in-one-symbol" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    \wedge and \vee juxtaposed in one symbol
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/84246/when-and-why-did-bilbo-write-a-song-about-aragorn" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    When and why did Bilbo write a song about Aragorn
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/41915/what-are-the-pros-and-cons-of-being-co-supervised" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What are the pros and cons of being co-supervised?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/84147/allowing-the-public-to-generate-a-csr-from-your-private-key" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Allowing the public to generate a CSR from your private key
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/84146/how-do-i-recover-from-an-email-breach" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do I recover from an email breach?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/58266/problems-with-party-formation-youre-the-dm-you-can-figure-it-out" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Problems with Party Formation: "You're the DM, you can figure it out."
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="http://electronics.stackexchange.com/questions/160311/i-am-a-quadriplegic-would-it-be-possible-to-power-my-ventilator-humidifier-with" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    I am a quadriplegic. Would it be possible to power my ventilator humidifier with a battery?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-askubuntu" title="Ask Ubuntu"></div><a href="http://askubuntu.com/questions/598643/how-do-i-count-text-lines" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:89 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do I count text lines?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/10574/the-largest-integer-made-of-1-2-3-4" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    The largest integer made of 1,2,3,4
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/29155970/is-there-a-way-to-avoid-loops-when-adding-to-a-list" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there a way to avoid loops when adding to a list?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/234588/what-is-the-specific-term-for-this-kind-of-pun" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the specific term for this kind of pun?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/10542/where-is-jennifers-husband" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Where is Jennifer's husband?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/41920/does-posting-a-paper-on-an-online-forum-establish-priority" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does posting a paper on an online forum establish priority?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/58322/can-i-use-the-cryptography-skill-to-learn-new-languages" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can I use the cryptography skill to learn new languages?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-aviation" title="Aviation Stack Exchange"></div><a href="http://aviation.stackexchange.com/questions/13332/were-there-any-successful-flying-machines-that-did-not-rely-on-bernoullis-princ" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:528 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Were there any successful flying machines that did not rely on Bernoulli's Principle?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/49908/what-workflow-should-i-use-for-enterprise-level-business-card-creation" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:174 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What workflow should I use for enterprise-level business card creation?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/84280/who-replaced-gandalf-as-the-grey-wizard" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Who replaced Gandalf as the Grey Wizard?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/44862/whats-up-with-low-visibility-in-thailand" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What's up with low visibility in Thailand?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/676834/response-time-slows-as-the-day-goes-on-where-to-start-troubleshooting" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Response time slows as the day goes on, where to start troubleshooting?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1197362/lie-group-how-is-manifold-defined" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Lie group. How is manifold defined?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/84309/under-the-dome-who-created-the-dome-and-why" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Under the Dome: Who created the dome and why?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-gaming" title="Arqade"></div><a href="http://gaming.stackexchange.com/questions/210360/how-can-i-escape-being-pinned-by-monsters" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:41 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I escape being pinned by monsters?
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/7789043" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/7789043/ivc/619e');});
+</script>
+<noscript>
+    &lt;div&gt;&lt;img src="/posts/7789043/ivc/619e" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">default</div></div>
+
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                    <a href="http://blog.stackoverflow.com/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackexchange.com/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems.">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="Information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (14)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (10)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+
+            <div id="copyright">
+                site design / logo © 2015 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2015.3.20.2398
+            </div>
+            
+        </div>
+    </div>
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+    </noscript>
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    ados.run.push(function () { ados_setKeywords('javascript,jquery');; ados_load(); });         
+</script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-5620270-1');        
+        
+        ga('set', 'dimension2', '|javascript|jquery|');         
+        ga('send', 'pageview');
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+            qc.async=true;
+            qc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+            s.parentNode.insertBefore(qc, s);
+            var sc=document.createElement('script');
+            sc.async=true;
+            sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+            s.parentNode.insertBefore(sc, s);
+        })();
+        _comscore.push({ c1: "2", c2: "17440561" });
+        _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+    </script>        
+    
+    
+</body></html>

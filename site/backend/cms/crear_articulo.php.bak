@@ -1,0 +1,274 @@
+<?php
+	session_start();
+	$user = $_SESSION['user'];
+	$id	  = $_SESSION['id'];
+?>
+
+<!-- KICKSTART -->
+<link rel="stylesheet" type="text/css" href="../css/kickstart.css" media="all" />
+<link rel="stylesheet" type="text/css" href="../style.css" media="all" /> 
+<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../js/kickstart.js"></script>
+<!-- KICKSTART -->
+<script type="text/javascript" src="../js/crear_articulo.js"></script>
+
+<script>
+$(document).ready(function(e) {
+   
+   $("#url_videoD").hide();
+   $("#opcion_img_galeria").hide();
+   $("#opcion_img_slide").hide();
+   
+   //Al momento del submit
+   $("#form1").submit(function(e) {
+   		var titulo_txt 		= $("#titulo").val();
+		var contenido_txt	= $("#contenido").val();
+		
+		//Si titulo esta vacio
+		if( titulo_txt == "" ){
+			console.log("titulo vacio");
+			$("#error_titulo_msj").show();
+			$("#error_titulo_msj").addClass("notice error");
+			$("#error_titulo_msj").html("<i class='icon-remove-sign icon-small'></i>Ingresa un titulo para el articulo por favor.");
+			$("#titulo").focus();
+			$("#error_titulo_msj").fadeOut(3000);
+			return false;
+		}
+		
+		//Si contenido esta vacio
+		if( contenido_txt == "" ){
+			console.log("contenido vacio");
+			$("#error_contenido_msj").show();
+			$("#error_contenido_msj").addClass("notice error");
+			$("#error_contenido_msj").html("<i class='icon-remove-sign icon-small'></i>Ingresa el contenido para el articulo por favor.");
+			$("#contenido").focus();
+			$("#error_contenido_msj").fadeOut(3000);
+			return false;
+		}
+		
+		//si url de video esta vacio
+		var urlChkd = $("#url_video").is(":checked");
+		var urlVideo_chk = $("#url_video_input").val();
+		
+		if( urlChkd ){
+			if( urlVideo_chk == "" ){
+				console.log( "url video vacio." );
+				$("#error_urlvideo_msj").show();
+				$("#error_urlvideo_msj").addClass("notice error");
+				$("#error_urlvideo_msj").html("<i class='icon-remove-sign icon-small'></i>Ingresa una URL de video valida por favor.");
+				$("#url_video_input").focus();
+				$("#error_urlvideo_msj").fadeOut(3000);
+				return false;
+			}
+		}
+   });
+   
+   //Para la seccion de imagenes
+   $("#img_fija").change(function(e) {
+		$("#opcion_img_fija").show("fast");
+		$("#opcion_img_galeria").hide("slow");
+		$("#opcion_img_slide").hide("slow");
+   });
+   
+   $("#img_galeria").change(function(e) {
+	   $("#opcion_img_galeria").show("fast");
+	   $("#opcion_img_fija").hide("slow");
+	   $("#opcion_img_slide").hide("slow");
+   });
+   
+   $("#img_slide").change(function(e) {
+	   $("#opcion_img_slide").show("fast");
+	   $("#opcion_img_fija").hide("slow");
+	   $("#opcion_img_galeria").hide("slow");
+   });
+   
+   $("#num_imgs_galeria").change(function(e) {
+	   var imgGal = $("#num_imgs_galeria").val();
+	   console.log( imgGal );
+   });
+   
+   $("#num_imgs_slide").change(function(e) {
+	   var imgSlide = $("#num_imgs_slide").val();
+	   console.log( imgSlide );
+   });
+   
+   //Para la seccion de video
+   $("#no_video").change(function(e) {
+	   $("#url_videoD").hide("slow");
+	   $("#url_video_input").val("");
+   });
+   
+   $("#url_video").change(function(e) {
+	   $("#url_videoD").show("fast");
+   });
+   
+});
+</script>
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Nuevo articulo.</title>
+</head>
+
+<body>
+
+<div class="grid flex">
+<?php 
+	include_once( "../Funciones/conexion_db.php" );
+	include_once( "menuadmin.php" );
+	
+	$q = "SELECT * FROM articulo WHERE 1";
+	$conn = openconn();
+	$q1 = mysql_query( $q ) or die(mysql_error());
+	closeconn($conn);
+?>
+
+<form name="form1" id="form1" method="post" action="" >
+
+<fieldset>
+
+	<div class="col_12">
+        <fieldset>
+            <legend><strong>Articulo</strong></legend> 
+            <div class="col_12">   
+            	
+            	<div class="col_7">       
+                    <label id="titulo_label">Titulo del articulo:</label>  
+                    <input type="text" name="titulo" id="titulo" align="left" maxlength="75" size="105">
+                </div>
+                <div class="col_5">
+                	<div id="error_titulo_msj" class="left"></div>
+                </div>
+                
+            </div>  
+                       
+            <br><br>
+            
+            <div class="col_12">
+            	
+                <div class="col_7">
+                    <label>Contenido del articulo:</label>
+                    <textarea name="contenido" id="contenido" cols="90" rows="2" ></textarea>
+                </div>
+                <div class="col_5">
+                	<div id="error_contenido_msj" class="left"></div>
+                </div>
+            </div>
+            
+            <br><br>
+            
+            <!--<div class="col_12">
+                <label>Tags:</label>
+                <input type="text" name="tag" id="tag" align="left" size="30" maxlength="75">
+            </div>-->
+        </fieldset>
+    </div>
+
+	<fieldset>
+        <legend><strong>Imagenes</strong></legend>
+        <div id="opciones_img" class="col_12">
+            <div class="col_3 center"><input type="radio" name="tipo_img" id="img_fija" value="Fija" checked> Fija</div>
+            <div class="col_3 center"><input type="radio" name="tipo_img" id="img_galeria" value="Galeria"> Galeria</div>
+            <!--<div class="col_3 center"><input type="radio" name="tipo_img" id="img_banner" value="Banner"> Banner</div>-->
+            <div class="col_3 center"><input type="radio" name="tipo_img" id="img_slide" value="Slide"> Slide</div>
+        </div>
+        
+        <div id="opcion_img_fija">
+            <fieldset>
+                <legend>Imagen Fija</legend>
+                    <label>Subir imagen:</label>
+                    <input type="file" name="subir_imagen_fija" id="subir_imagen_fija" accept="image/*"/>
+            </fieldset>
+        </div>        
+        
+        <div id="opcion_img_galeria">
+        	<fieldset>
+            	<legend>Agregar imagenes para la galeria</legend>
+                Numero de imagenes:
+                <select name="num_imgs_galeria" id="num_imgs_galeria">
+                <?php
+					for( $i = 1; $i < 6; $i++ ){
+						echo '<option value="'.$i.'">'.$i.'</option>';
+					}
+				?>            
+                </select>
+                <br><br>
+                <input type="file" name="subir_imagen_galeria" id="subir_imagen_galeria" accept="image/*"/>
+            </fieldset>
+        </div>
+        
+        <!--<div id="opcion_img_banner">
+        </div>-->
+        
+        <div id="opcion_img_slide">
+        	<fieldset>
+            	<legend>Agregar imagenes para el slide</legend>
+                Numero de imagenes:
+                <select name="num_imgs_slide" id="num_imgs_slide">
+                <?php
+					for( $i = 1; $i < 6; $i++ ){
+						echo '<option value="'.$i.'">'.$i.'</option>';
+					}
+				?>
+                </select>
+                <br><br>
+                <input type="file" name="subir_imagen_slide" id="subir_imagen_slide" accept="image/*"/>
+            </fieldset>
+        </div>
+    </fieldset>
+    
+    <fieldset>
+    	<legend><strong>Video</strong></legend>
+        
+        <div id="opciones_video" class="col_12">
+        	<div class="col_6 center"><input type="radio" name="tipo_video" id="no_video" value="Sin video" checked> Sin video.</div> 
+            <div class="col_6 center"><input type="radio" name="tipo_video" id="url_video" value="URL video"> Insertar video.</div>
+        </div>
+        
+        <div class="col_12">
+        	<div id="url_videoD" class="col_7">
+                <label>URL del video:</label>
+                <input type="text" name="url_video_input" id="url_video_input" align="left" size="97" maxlength="75">
+            </div>
+            
+            <div class="col_5">
+            	<div id="error_urlvideo_msj" class="left"></div>
+            </div>
+        </div>
+        
+    </fieldset>
+    
+    <fieldset>
+    	<legend><strong>Sección</strong></legend>
+    	<div class="col_12">
+    		<label>
+            	Categoría en la que estará el artículo:
+                <select name="id_articuloAsc" name="id_articuloAsc">
+                <?php
+					while( $row = mysql_fetch_array($q1) ){
+						echo '<option value="'.$row['id_articulo'].'">'.$row['titulo_articulo'].'</option>';
+					} 
+				?>
+                </select>
+            </label>
+	    </div>
+    </fieldset>
+    
+    <div class="col_12">
+    	<div class="col_12 center" id="boton_crear">
+        	<button class="large blue">
+            	<i class="icon-plus"></i> Crear articulo
+            </button>
+        </div>
+    </div>
+    
+</fieldset>
+
+</form> <!-- End form1 -->
+</div><!-- End div grid -->
+
+</body>
+</html>

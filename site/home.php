@@ -1,0 +1,601 @@
+
+<?php
+
+//acceso a la base de datos
+include_once("../cms/articles.php");
+
+$db = openconn();
+$data = new dataRecovery($db);
+$data->setCategory("La moda que no incomoda");
+//$data->setArticle(0);
+//$data->article->writeTitle();
+//closeconn($db);
+
+
+
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<title>Inez Inez</title>
+
+<!-- Fonts -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Abril+Fatface" />
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Quicksand" />
+
+<!-- Stylesheets -->
+<link rel='stylesheet' href='css/site/flexslider.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/site/jquery.fancybox-1.3.4.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/site/style.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/site/epicslider.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/site/udt_shortcodes.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/site/skin.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/site/udt_media_queries.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/arctext/style.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/arctext/demo.css' type='text/css' media='all' />
+
+<script type='text/javascript' src='js/site/jquery-1.11.0.min.js'></script>
+<script type='text/javascript' src='js/site/jquery-migrate-1.2.1.min.js'></script>
+    
+<script type='text/javascript' src="js/sliders/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/sliders/jssor.js"></script>
+<script type="text/javascript" src="js/sliders/jssor.slider.js"></script>
+<script type="text/javascript" src="js/arctext/jquery.arctext.js"></script>
+
+<script type="text/javascript">
+	jQuery('head').append('<style>#wrapper, #footer{display:none;}</style>');
+    jQuery(window).resize(function() {
+        // This will execute whenever the window is resized
+        var h = jQuery(window).height();
+        var w = jQuery(window).width();
+        var aspect = w/h;
+        aspect = aspect * 70 * 0.5;
+        jQuery('div.s1-caption').css({"top": aspect + "%"});
+    });
+    jQuery(document).ready(function($) {
+      var _SlideshowTransitions = [
+            //Fade
+            { $Duration: 1200, $Opacity: 2 }
+            ];
+
+            var options = {
+                $AutoPlay: true,
+                $AutoPlaySteps: 1,
+                $AutoPlayInterval: 3000,
+                $PauseOnHover: 1,
+                $ArrowKeyNavigation: true,
+                $SlideDuration: 500,
+                $MinDragOffsetToSlide: 20,
+                $SlideSpacing: 0,
+                $DisplayPieces: 1,
+                $ParkingPosition: 0,
+                $UISearchMode: 1,
+                $PlayOrientation: 1,
+                $DragOrientation: 3,
+                $SlideshowOptions: {
+                    $Class: $JssorSlideshowRunner$,
+                    $Transitions: _SlideshowTransitions,
+                    $TransitionsOrder: 1,
+                    $ShowLink: true
+                },
+
+                $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$,
+                    $ChanceToShow: 2,
+                    $AutoCenter: 1,
+                    $Steps: 1,
+                    $Lanes: 1,
+                    $SpacingX: 10,
+                    $SpacingY: 10,
+                    $Orientation: 1
+                },
+
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$,
+                    $ChanceToShow: 2,
+                    $Steps: 1
+                }
+            };
+        
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+            function ScaleSlider() {
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                if (parentWidth)
+                    jssor_slider1.$ScaleWidth(Math.min(parentWidth, 510));
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+    });
+    
+</script>
+    
+
+</head>
+<body class="home page">
+    
+<!-- Start Wrapper -->
+<div id="wrapper">
+
+	<!-- Start Header -->
+	<div class="header header-main">
+		<div class="inner">
+
+			<!-- Logo -->
+			<div class="logo-container">
+				<div class="logo">
+					<a class="navigateTo" href="index.html" >
+						<img src="resources/Layout/puerco_header-07.png" />
+					</a>
+				</div>
+			</div>
+
+			<!-- MobileMenu Toggle -->
+			<div class="mobileMenuToggle"><a href=""></a></div>
+
+			<!-- Navigation -->
+			<div class="menu">
+				<ul id="menu-main-menu" class="menu">
+                    <li class="menu-item current-menu-item current_page_item menu-item-home">
+                    
+                    </li>
+					<li class="menu-item current-menu-item current_page_item menu-item-home"><a href="index.html#s0"><span style="color:black">LA MODA <br/>QUE NO<br/>INCOMODA</span></a></li>
+                    <li class="menu-item current-menu-item current_page_item menu-item-home"><a href="index.html#s1"><span style="color:black">ARTY<br/>PARTY</span></a></li>
+                    <li class="menu-item current-menu-item current_page_item menu-item-home"><a href="index.html#s2"><span style="color:black">YUMMY<br/>MUMMY</span></a></li>
+                    <li class="menu-item current-menu-item current_page_item menu-item-home"><a href="index.html#s3"><span style="color:black">EL RINCÒN <br/>DE INEZ</span></a></li>
+					
+				</ul>
+			</div>
+
+		</div>
+	</div>
+	<!-- End Header -->
+
+	
+<div id="s" class="section odd">
+    <div>
+        <div>
+	   <div class="section1-bg">
+            <img src="resources/Layout/fondogrande.png" alt="" usemap="#Map" />
+            <map name="Map" id="Map">
+                <area alt="" title="" href="#" shape="poly" coords="338,939,341,960,377,962,374,940" />
+                <area alt="" title="" href="#" shape="poly" coords="551,954,554,974,583,978,585,956" />
+                <area alt="" title="" href="#" shape="poly" coords="816,868,820,896,851,896,851,870" />
+                <area alt="" title="" href="#" shape="poly" coords="1654,780,1650,910,1697,896,1707,961,1735,951,1743,875,1758,798,1713,759" />
+            </map>
+           <!--<div class="s1-caption" style="">Lorem Ipsum Lorem Ipsum</div>-->
+        </div>
+            </div>
+    </div>
+</div>
+    
+    <div id="s0" class="section odd" style="border-bottom: 5px solid rgba(0,0,0,0.2);">
+    <div class="content clearfix">
+        <div>
+        <center>
+            <div>
+                <img src="resources/Layout/inezinez.png" />
+            </div>
+            
+            <div class="img-container" style="margin-top:3%; -webkit-mask-box-image: url(resources/Layout/puercoespin_template3.png) /*url(http://www.clker.com/cliparts/G/x/s/F/1/E/black-shades-hi.png)*/;">
+                <img src="resources/img/1julia.jpg"/>
+            </div>
+            
+            <div style="margin-top:3%">
+                <h3 id="arctxt" style="display:block" class="inez-text">
+                    <?php
+                        $data->setArticle(26);
+                        $data->article->writeTitle();
+                    ?>
+                </h3>
+            </div>
+           
+            <div style="margin-top:5%">
+            <div class="column_one_fourth" >
+                <div style="position:absolute;top:70%;left:17%">
+                <p  style="display:block" class="inez-text">
+                    <?php
+                        $data->setArticle(22);
+                        trim($data->article->writeTitle());
+                    ?>
+                </p>
+                </div>
+                <div class="overlay-moda-circle">
+                    <?php
+                        $data->setImgPath();
+                        
+                    ?>
+                    <img src="<?php $data->article->writeImg(); ?>" width="179" height="189" class="overlay-moda-img" />
+                </div>
+            </div>
+            <div class="column_one_fourth" >
+                <div style="position:absolute;top:70%;left:17%">
+                <p  style="display:block" class="inez-text">
+                    <?php
+                        $data->setArticle(23);
+                        $data->article->writeTitle();
+                    ?>
+                </p>
+                </div>
+                <div class="overlay-moda-circle">
+                    <img src="resources/img/harry.jpg" width="179" height="189" class="overlay-moda-img" />
+                </div>
+            </div>
+            <div class="column_one_fourth" >
+                <div style="position:absolute;top:70%;left:17%">
+                <p id="arctxt" style="display:block" class="inez-text">
+                    Lorem Ipsum
+                </p>
+                </div>
+                <div class="overlay-moda-circle">
+                    <img src="resources/img/harry.jpg" width="179" height="189" class="overlay-moda-img" />
+                </div>
+            </div>  
+            <div class="column_one_fourth" >
+                <div style="position:absolute;top:70%;left:17%">
+                <p id="arctxt" style="display:block" class="inez-text">
+                    Lorem Ipsum
+                </p>
+                </div>
+                <div class="overlay-moda-circle">
+                    <img src="resources/img/harry.jpg" width="179" height="189" class="overlay-moda-img" />
+                </div>
+            </div>
+            </div>
+            
+            <!--<div class="marco-moda-bg">-->
+                <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden; background:url(resources/Layout/marco_cuadrado.png) no-repeat; width:510px; height:432px ;">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        
+        <div u="slides" style="cursor: move; position: absolute; left:0;top:0; width: 435px; height: 350px; overflow: hidden;top:55px;left:36px;">
+            <div>
+                <img u="image" src="resources/img/landscape/02.jpg"  />
+            </div>
+            <div>
+                <img u="image" src="resources/img/landscape/03.jpg" />
+            </div>
+            <div>
+                <img u="image" src="resources/img/landscape/04.jpg" />
+            </div>
+            <div>
+                <img u="image" src="resources/img/landscape/02.jpg" />
+            </div>
+            <div>
+                <img u="image" src="resources/img/landscape/03.jpg" />
+            </div>
+            <div>
+                <img u="image" src="resources/img/landscape/04.jpg" />
+            </div>
+        </div>
+        <!--</div>-->
+
+        <!-- Bullet Navigator Skin Begin -->
+        <style>
+            /* jssor slider bullet navigator skin 05 css */
+            /*
+            .jssorb05 div           (normal)
+            .jssorb05 div:hover     (normal mouseover)
+            .jssorb05 .av           (active)
+            .jssorb05 .av:hover     (active mouseover)
+            .jssorb05 .dn           (mousedown)
+            */
+            .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+                background: url(resources/img/landscape/b05.png) no-repeat;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .jssorb05 div {
+                background-position: -7px -7px;
+            }
+
+                .jssorb05 div:hover, .jssorb05 .av:hover {
+                    background-position: -37px -7px;
+                }
+
+            .jssorb05 .av {
+                background-position: -67px -7px;
+            }
+
+            .jssorb05 .dn, .jssorb05 .dn:hover {
+                background-position: -97px -7px;
+            }
+        </style>
+        <!-- bullet navigator container -->
+        <div u="navigator" class="jssorb05" style="position: absolute; bottom: 16px; right: 6px;">
+            <!-- bullet navigator item prototype -->
+            <div u="prototype" style="POSITION: absolute; WIDTH: 16px; HEIGHT: 16px;"></div>
+        </div>
+        <!-- Bullet Navigator Skin End -->
+        <!-- Arrow Navigator Skin Begin -->
+        <style>
+            /* jssor slider arrow navigator skin 12 css */
+            /*
+            .jssora12l              (normal)
+            .jssora12r              (normal)
+            .jssora12l:hover        (normal mouseover)
+            .jssora12r:hover        (normal mouseover)
+            .jssora12ldn            (mousedown)
+            .jssora12rdn            (mousedown)
+            */
+            .jssora12l, .jssora12r, .jssora12ldn, .jssora12rdn {
+                position: absolute;
+                cursor: pointer;
+                display: block;
+                background: url(resources/img/landscape/) no-repeat;
+                overflow: hidden;
+            }
+
+            .jssora12l {
+                background-position: -16px -37px;
+            }
+
+            .jssora12r {
+                background-position: -75px -37px;
+            }
+
+            .jssora12l:hover {
+                background-position: -136px -37px;
+            }
+
+            .jssora12r:hover {
+                background-position: -195px -37px;
+            }
+
+            .jssora12ldn {
+                background-position: -256px -37px;
+            }
+
+            .jssora12rdn {
+                background-position: -315px -37px;
+            }
+        </style>
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 123px; left: 0px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 123px; right: 0px">
+        </span>
+        <!-- Arrow Navigator Skin End -->
+        <a style="display: none" href="http://www.jssor.com">jQuery Carousel</a>
+    </div>
+            
+                
+        </center>
+        </div>    
+    </div>
+    </div>
+    
+    <!--<div id="s1" class="section odd">
+    <div class="content clearfix">
+        <div>
+        <center>
+          
+            <div>
+            <div class="arty-bg" >
+            <img src="resources/img/julia.jpeg" style="height:293px;max-width:100%"/>
+            </div>
+            </div>
+            
+            <div style="margin-top:3%">
+            <div class="column_one_third" >
+                <div class="overlay-arty1">
+                    <img src="resources/img/harry.jpg" width="179" height="271" class="overlay-arty-img" />
+                </div>
+            </div>
+            <div class="column_one_third" >
+                <div class="overlay-arty2">
+                    <img src="resources/img/harry.jpg" width="179" height="271" class="overlay-arty-img" />
+                </div>
+            </div>
+            <div class="column_one_third" >
+                <div class="overlay-arty3">
+                    <img src="resources/img/harry.jpg" width="179" height="271" class="overlay-arty-img" />
+                </div>
+            </div>
+            </div>
+                
+        </center>
+        </div>    
+    </div>
+    </div>-->
+    
+    <div id="s1" class="section even">
+<div class="content clearfix">
+<div class="section-title"><h2>A <span>Collection</span> <small>of <span>Quality</span> and <span>professionalism</span></small></h2></div>
+					<div id="ajaxwrapper">
+						<div id="folio-navigation">
+							<ul>
+								<li id="prevProject"><a href="#"></a></li>
+								<li id="closeProjectMobile"><a href="#"></a></li>
+								<li id="nextProject"><a href="#"></a></li>
+							</ul>
+						</div>
+						<div id="closeProject"><a href="http://demos.udthemes.com/ego/wordpress/light/#portfolio"></a></div>
+						<div id="loader"></div>
+						<div id="ajax-content-outer"><div id="ajax-content-inner"></div></div>
+					</div>
+					<div id="folio-grid">
+<div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/identity/" title="A &amp; W" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-aw1-195x195.jpg" alt="A &amp; W" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/tunn-typo/" title="Tunn Typo" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-tunn-3-195x195.jpg" alt="Tunn Typo" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/high-octane/" title="High Octane" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/small-octane-195x195.jpg" alt="High Octane" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/mike-diamond/" title="Mike Diamond" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/small-mike-diamond-195x195.jpg" alt="Mike Diamond" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/iconic/" title="Iconic" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-iconic-195x195.jpg" alt="Iconic" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/milan-fashion/" title="Milan Fashion" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/small-milan-195x195.jpg" alt="Milan Fashion" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/better-typo/" title="Bitchy Typo" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-typefactory-195x195.jpg" alt="Bitchy Typo" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/manifesto/" title="Manifesto" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-E-195x195.jpg" alt="Manifesto" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/jackobs-identity/" title="Jackobs Identity" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-cigar-195x195.jpg" alt="Jackobs Identity" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/180/" title="Axe &amp; Hammer" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-axe-hammer-single-195x195.jpg" alt="Axe &amp; Hammer" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/photoshoot-milan/" title="Photoshoot Milan" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/fashion-week-195x195.jpg" alt="Photoshoot Milan" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/tunn-composition/" title="Tunn Composition" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-tunn-large-195x195.jpg" alt="Tunn Composition" /></a></div></div></div>
+</div>
+<div id="teaser-portfolio" class="teaser" style="background-image: url(http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/large-slide-9.jpg);">
+<div class="info-container"><div class="info"><div class="info-inner"><blockquote class="quote " ><p>The most innovative designers consciously reject the standard option box and cultivate an appetite for thinking wrong.</p>
+<p class="blockquote_cite">&#8211;Marty Neumeier</p>
+</blockquote>
+</div></div></div>
+<div class="section-button"><a class="page-up navigateTo" href="#portfolio"></a></div>
+</div></div>
+    
+    
+    <div id="s2" class="section even">
+<div class="content clearfix">
+<div class="section-title"><h2>A <span>Collection</span> <small>of <span>Quality</span> and <span>professionalism</span></small></h2></div>
+					<div id="ajaxwrapper">
+						<div id="folio-navigation">
+							<ul>
+								<li id="prevProject"><a href="#"></a></li>
+								<li id="closeProjectMobile"><a href="#"></a></li>
+								<li id="nextProject"><a href="#"></a></li>
+							</ul>
+						</div>
+						<div id="closeProject"><a href="http://demos.udthemes.com/ego/wordpress/light/#portfolio"></a></div>
+						<div id="loader"></div>
+						<div id="ajax-content-outer"><div id="ajax-content-inner"></div></div>
+					</div>
+					<div id="folio-grid">
+<div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/identity/" title="A &amp; W" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-aw1-195x195.jpg" alt="A &amp; W" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/tunn-typo/" title="Tunn Typo" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-tunn-3-195x195.jpg" alt="Tunn Typo" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/high-octane/" title="High Octane" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/small-octane-195x195.jpg" alt="High Octane" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/mike-diamond/" title="Mike Diamond" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/small-mike-diamond-195x195.jpg" alt="Mike Diamond" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/iconic/" title="Iconic" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-iconic-195x195.jpg" alt="Iconic" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/milan-fashion/" title="Milan Fashion" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/small-milan-195x195.jpg" alt="Milan Fashion" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/better-typo/" title="Bitchy Typo" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-typefactory-195x195.jpg" alt="Bitchy Typo" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/manifesto/" title="Manifesto" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-E-195x195.jpg" alt="Manifesto" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/jackobs-identity/" title="Jackobs Identity" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-cigar-195x195.jpg" alt="Jackobs Identity" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/180/" title="Axe &amp; Hammer" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-axe-hammer-single-195x195.jpg" alt="Axe &amp; Hammer" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/photoshoot-milan/" title="Photoshoot Milan" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/fashion-week-195x195.jpg" alt="Photoshoot Milan" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/tunn-composition/" title="Tunn Composition" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-tunn-large-195x195.jpg" alt="Tunn Composition" /></a></div></div></div>
+</div>
+<div id="teaser-portfolio" class="teaser" style="background-image: url(http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/large-slide-9.jpg);">
+<div class="info-container"><div class="info"><div class="info-inner"><blockquote class="quote " ><p>The most innovative designers consciously reject the standard option box and cultivate an appetite for thinking wrong.</p>
+<p class="blockquote_cite">&#8211;Marty Neumeier</p>
+</blockquote>
+</div></div></div>
+<div class="section-button"><a class="page-up navigateTo" href="#portfolio"></a></div>
+</div></div>
+    
+    
+    <div id="s3" class="section even">
+<div class="content clearfix">
+<div class="section-title"><h2>A <span>Collection</span> <small>of <span>Quality</span> and <span>professionalism</span></small></h2></div>
+					<div id="ajaxwrapper">
+						<div id="folio-navigation">
+							<ul>
+								<li id="prevProject"><a href="#"></a></li>
+								<li id="closeProjectMobile"><a href="#"></a></li>
+								<li id="nextProject"><a href="#"></a></li>
+							</ul>
+						</div>
+						<div id="closeProject"><a href="http://demos.udthemes.com/ego/wordpress/light/#portfolio"></a></div>
+						<div id="loader"></div>
+						<div id="ajax-content-outer"><div id="ajax-content-inner"></div></div>
+					</div>
+					<div id="folio-grid">
+<div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/identity/" title="A &amp; W" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-aw1-195x195.jpg" alt="A &amp; W" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/tunn-typo/" title="Tunn Typo" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-tunn-3-195x195.jpg" alt="Tunn Typo" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/high-octane/" title="High Octane" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/small-octane-195x195.jpg" alt="High Octane" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/mike-diamond/" title="Mike Diamond" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/small-mike-diamond-195x195.jpg" alt="Mike Diamond" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/iconic/" title="Iconic" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-iconic-195x195.jpg" alt="Iconic" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/milan-fashion/" title="Milan Fashion" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/small-milan-195x195.jpg" alt="Milan Fashion" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/better-typo/" title="Bitchy Typo" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-typefactory-195x195.jpg" alt="Bitchy Typo" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/manifesto/" title="Manifesto" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-E-195x195.jpg" alt="Manifesto" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/jackobs-identity/" title="Jackobs Identity" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-cigar-195x195.jpg" alt="Jackobs Identity" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/180/" title="Axe &amp; Hammer" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-axe-hammer-single-195x195.jpg" alt="Axe &amp; Hammer" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/photoshoot-milan/" title="Photoshoot Milan" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/fashion-week-195x195.jpg" alt="Photoshoot Milan" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/tunn-composition/" title="Tunn Composition" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-tunn-large-195x195.jpg" alt="Tunn Composition" /></a></div></div></div>
+</div>
+<div id="teaser-portfolio" class="teaser" style="background-image: url(http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/large-slide-9.jpg);">
+<div class="info-container"><div class="info"><div class="info-inner"><blockquote class="quote " ><p>The most innovative designers consciously reject the standard option box and cultivate an appetite for thinking wrong.</p>
+<p class="blockquote_cite">&#8211;Marty Neumeier</p>
+</blockquote>
+</div></div></div>
+<div class="section-button"><a class="page-up navigateTo" href="#portfolio"></a></div>
+</div></div>
+    
+    
+    
+    <div id="s4" class="section odd">
+<div class="content clearfix">
+<div class="section-title"><h2>A <span>Collection</span> <small>of <span>Quality</span> and <span>professionalism</span></small></h2></div>
+					<div id="ajaxwrapper">
+						<div id="folio-navigation">
+							<ul>
+								<li id="prevProject"><a href="#"></a></li>
+								<li id="closeProjectMobile"><a href="#"></a></li>
+								<li id="nextProject"><a href="#"></a></li>
+							</ul>
+						</div>
+						<div id="closeProject"><a href="http://demos.udthemes.com/ego/wordpress/light/#portfolio"></a></div>
+						<div id="loader"></div>
+						<div id="ajax-content-outer"><div id="ajax-content-inner"></div></div>
+					</div>
+					<div id="folio-grid">
+<div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/identity/" title="A &amp; W" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-aw1-195x195.jpg" alt="A &amp; W" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/tunn-typo/" title="Tunn Typo" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-tunn-3-195x195.jpg" alt="Tunn Typo" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/high-octane/" title="High Octane" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/small-octane-195x195.jpg" alt="High Octane" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/mike-diamond/" title="Mike Diamond" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/small-mike-diamond-195x195.jpg" alt="Mike Diamond" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/iconic/" title="Iconic" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-iconic-195x195.jpg" alt="Iconic" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/milan-fashion/" title="Milan Fashion" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/small-milan-195x195.jpg" alt="Milan Fashion" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/better-typo/" title="Bitchy Typo" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-typefactory-195x195.jpg" alt="Bitchy Typo" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/manifesto/" title="Manifesto" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-E-195x195.jpg" alt="Manifesto" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/jackobs-identity/" title="Jackobs Identity" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-cigar-195x195.jpg" alt="Jackobs Identity" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/180/" title="Axe &amp; Hammer" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-axe-hammer-single-195x195.jpg" alt="Axe &amp; Hammer" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/photoshoot-milan/" title="Photoshoot Milan" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/fashion-week-195x195.jpg" alt="Photoshoot Milan" /></a></div></div><div class="folio-thumb-container"><div class="folio-thumb"><a href="http://demos.udthemes.com/ego/wordpress/light/portfolio/tunn-composition/" title="Tunn Composition" class="folio-link"><img class="lazy" src="http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/full-width-tunn-large-195x195.jpg" alt="Tunn Composition" /></a></div></div></div>
+</div>
+<div id="teaser-portfolio" class="teaser" style="background-image: url(http://demos.udthemes.com/ego/wordpress/light/wp-content/uploads/2013/03/large-slide-9.jpg);">
+<div class="info-container"><div class="info"><div class="info-inner"><blockquote class="quote " ><p>The most innovative designers consciously reject the standard option box and cultivate an appetite for thinking wrong.</p>
+<p class="blockquote_cite">&#8211;Marty Neumeier</p>
+</blockquote>
+</div></div></div>
+<div class="section-button"><a class="page-up navigateTo" href="#portfolio"></a></div>
+</div></div>
+
+
+	<div class="clear" style="height:300px;"></div>
+
+</div>        
+<!--end wrapper--> 
+
+<!--start footer-->
+<div id="footer">
+	
+</div>
+
+<!--end footer-->
+
+<!-- Scripts -->
+<script type='text/javascript' src='js/site/jquery-ui-1.9.0.custom.min.js'></script>
+<script type='text/javascript' src='js/site/jquery.mobile-touch-swipe-1.0.js'></script>
+<script type='text/javascript' src='js/site/iOS-timer.js'></script>
+<script type='text/javascript' src='js/site/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='js/site/jquery.epicslider.js'></script>
+<script type='text/javascript' src='js/site/jquery.flexslider-min-edited.js'></script>
+<script type='text/javascript' src='js/site/waypoints.min.js'></script>
+<script type='text/javascript' src='js/site/jquery.parallax-1.1.3.js'></script>
+<script type='text/javascript' src='js/site/jquery.ajaxloading.js'></script>
+<script type='text/javascript' src='js/site/is-mobile.js'></script>
+<script type='text/javascript' src='js/site/settings.js'></script>
+<script type='text/javascript' src='js/site/onepage.js'></script>
+<script type='text/javascript' src='js/site/jquery.fancybox-1.3.4.js'></script>
+<script type='text/javascript' src='js/site/jquery.metadata.js'></script>
+<script type='text/javascript' src='js/site/common.js'></script>
+<script type='text/javascript' src='js/site/udt_shortcodes.js'></script>
+<script type='text/javascript' src='js/site/contact.js'></script>
+<script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?sensor=false'></script>
+    
+<script src="js/site/maps/jquery.maps.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+	jQuery('img[usemap]').rwdImageMaps();
+	
+    jQuery('div.logo').on('hover', function() {
+		jQuery('ul.menu').fadeIn("slow","linear");
+        jQuery('ul.menu').css({"display":"block"});
+    });
+    
+    jQuery('div.logo').on('mouseleave', function() {
+		jQuery('ul.menu').fadeOut("slow","linear");
+    });
+    
+    $('.img-container').find('img').each(function() {
+        var imgClass = (this.width / this.height > 1) ? 'wide' : 'tall';
+        $(this).addClass(imgClass);
+    })
+    
+    var $arctxt	= $('#arctxt');
+    $arctxt.arctext({radius: 400, dir: -1})
+    
+    var $arctxt1 = $('#arctxt1');
+    $arctxt1.arctext({radius: 150, dir:1})
+    
+    var $arctxt2 = $('#arctxt2');
+    $arctxt2.arctext({radius: 150, dir:1})
+    
+	/*$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});*/
+    
+});
+</script>
+
+</body>
+</html>
