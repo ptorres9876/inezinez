@@ -9,11 +9,13 @@
         <script src="http://code.createjs.com/easeljs-0.6.0.min.js" type="text/javascript"></script>
     </head>
     <body>
-        <div class="link-center"><a href="index2.html"> >>ENTRAR<< </a></div>
         <div id="test">
             <img src="resources/img/huellitas.png" class="one" style="display:none" />
-            <canvas id="canvas" />
+            <!--<div class="canvas1">-->
+            <canvas id="canvas" style="border:1px solid"/>
+            <!--</div>-->
         </div>
+        <img id="door" src="resources/Layout/puerta.png" style="position:absolute;right:-23px;"/>
         <script>
             
         var $canvas;
@@ -29,6 +31,7 @@
         var stopped = false;
         var animWidth;
         var animHeight;
+        
 
             
 function init() 
@@ -48,6 +51,10 @@ function init()
     
     animWidth = $canvas.width * 1.0; //0.95
     animHeight = $canvas.height * 0.95;
+    
+    var doorPercentHeight = $(window).height()*25.0/640.0;
+    $("#door").css({top:doorPercentHeight+'%'});
+    alert();
 }
 
 function reset()
@@ -109,8 +116,8 @@ function tick()
     
     if(stopped)
     {
-        createjs.Ticker.setPaused(true);
-        setTimeout (window.location = "index2.html", 2000);
+        //createjs.Ticker.setPaused(true);
+        //setTimeout (window.location = "index2.html", 2000);
         return;
     }
     
@@ -247,9 +254,7 @@ function tick()
     }
     animate();         
 })(jQuery);
-    
-     
-            
         </script>
+        
     </body>
 </html>

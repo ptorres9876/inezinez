@@ -11,6 +11,7 @@
 .menu ul li a {
 	color:black;
     text-align:center;
+    font-size:1.3em;
 }
 
 .menu ul li a:hover {
@@ -19,7 +20,7 @@
 .menu ul li.current_page_item > a, .header .inner .menu ul li.current-menu-item > a {
 	/*background:#ffffff;*/
     text-decoration: line-through;
-    color:#01DFD7;
+    color:#0FDDAF;
 }
 
 .menu ul li.current > a, .menu ul li.current-menu-item > a, .menu ul li.current_page_item > a, .menu ul li.current-menu-ancestor > a, .menu ul li.current_page_ancestor > a{

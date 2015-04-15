@@ -50,7 +50,7 @@
 	.homepage,.section{z-index:1;}
 	#homepage{padding:0;}
 	.section{padding-top:20px;}/*100*/
-		.section .content{max-width:930px;margin:auto;position:relative; padding-bottom:100px;}
+		.section .content{max-width:90%;margin:auto;position:relative; padding-bottom:100px;}
 		.page-inner-left{width:680px;float:left; margin:0 30px 0 0;}
 	.section.odd{background:#f4f4f5 url(../images/patterns/crossed-light.png) top left repeat; background-attachment:scroll;}
 	.section.even{background:#111 url(../images/patterns/crossed-dark.png) top left repeat; background-attachment:scroll;}
@@ -75,9 +75,9 @@
 	/*inner pages*/
 	.header{width:100%; min-height:50px; height:auto !important; height:50px; line-height:49px; /*background: url(../images/ie8-transparent-bkg.png);*//*ie8 fallback*/ /*background: rgba(0,0,0,0.5) url(../images/pattern-header-banner.png) repeat;*/ position:fixed; top:0; z-index:50;}
 	.header.header-main{display:none;}
-	.header .inner {max-width:930px;margin:auto;}
-	.header .logo-container{height:50px; position:relative;float:left;}
-	.header .logo-container .logo{position:relative; bottom:0;top:15%}
+	.header .inner {max-width:90%;margin:auto;}
+	.header .logo-container{height:50px; position:relative;float:left; width:20%}
+	.header .logo-container .logo{position:relative; bottom:0;top:15%; left:35%}
 	.admin-bar .header, .admin-bar .epicSlider.slider-wrapper{ top:32px; }
 	
 		/* main menu
@@ -832,7 +832,7 @@ word-wrap: break-word;/* Internet Explorer 5.5+ */
     9.-- Site styles
 ------------------------------------------------------------*/
 
-.overlay-moda-circle{background: url(../../resources/Layout/template_redondo.png) no-repeat;position:relative}
+.overlay-moda-circle{background: url(../../resources/Layout/template_redondo.png) no-repeat center;position:relative}
 .overlay-moda-img{ clip: circle(46% at center);   -webkit-clip-path: circle(32% at 47% 34%);}
 .porcupine-bg{width:274px; height:205px;position:absolute;top:0;left:20%;
   background:url(../../resources/Layout/puercoespin_template.png) 0 0 no-repeat;}

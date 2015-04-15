@@ -52,9 +52,13 @@ body
 {
     position: relative;
     /*border:1px solid;*/
-    height: 75%;
+    height: 50%;/*75*/
     top:25%;
     overflow: hidden;
+}
+
+.canvas1{
+    /*position:absolute;*/
 }
 
 #test img 

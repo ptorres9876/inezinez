@@ -56,6 +56,28 @@ $data->setCategory("La moda que no incomoda");
         var aspect = w/h;
         aspect = aspect * 70 * 0.5;
         jQuery('div.s1-caption').css({"top": aspect + "%"});
+        
+        
+        var $ww = jQuery("#moda_circle0").height()/-31.0; 
+    jQuery("#moda_circles0").css({
+   'top' : jQuery("#moda_circle0").height()/3.96 + '%',
+   'left': $ww + 2 + '%' 
+    });
+    
+    jQuery("#moda_circles1").css({
+   'top' : jQuery("#moda_circle1").height()/3.93 + '%',
+   'left': $ww + 30 +'%' 
+    });
+    
+    jQuery("#moda_circles2").css({
+   'top' : jQuery("#moda_circle2").height()/3.93 + '%',
+   'left': $ww + 56 + '%' 
+    });
+    
+    jQuery("#moda_circles3").css({
+   'top' : jQuery("#moda_circle3").height()/3.93 + '%',
+   'left': $ww + 83 + '%' 
+    });
     });
     jQuery(document).ready(function($) {
       var _SlideshowTransitions = [
@@ -128,7 +150,7 @@ $data->setCategory("La moda que no incomoda");
 <div id="wrapper">
 
 	<!-- Start Header -->
-	<div class="header header-main">
+	<div class="header">
 		<div class="inner">
 
 			<!-- Logo -->
@@ -201,9 +223,9 @@ $data->setCategory("La moda que no incomoda");
             </div>
            
             <div style="margin-top:5%">
-            <div class="column_one_fourth" >
-                <div style="position:absolute;top:70%;left:17%">
-                <p  style="display:block" class="inez-text">
+            <div id="moda_circle0" class="column_one_fourth_circle_first" >
+                <div id="moda_circles0" style="position:absolute;top:70%;left:17%">
+                <p  id="tt0" style="display:block" class="inez-text">
                     <?php
                         $data->setArticle(22);
                         trim($data->article->writeTitle());
@@ -218,9 +240,9 @@ $data->setCategory("La moda que no incomoda");
                     <img src="<?php $data->article->writeImg(); ?>" width="179" height="189" class="overlay-moda-img" />
                 </div>
             </div>
-            <div class="column_one_fourth" >
-                <div style="position:absolute;top:70%;left:17%">
-                <p  style="display:block" class="inez-text">
+            <div id="moda_circle1" class="column_one_fourth_circle" >
+                <div id="moda_circles1" style="position:absolute;top:70%;left:17%">
+                <p  id="tt" style="display:block" class="inez-text">
                     <?php
                         $data->setArticle(23);
                         $data->article->writeTitle();
@@ -231,20 +253,26 @@ $data->setCategory("La moda que no incomoda");
                     <img src="resources/img/harry.jpg" width="179" height="189" class="overlay-moda-img" />
                 </div>
             </div>
-            <div class="column_one_fourth" >
-                <div style="position:absolute;top:70%;left:17%">
-                <p id="arctxt" style="display:block" class="inez-text">
-                    Lorem Ipsum
+            <div id="moda_circle2" class="column_one_fourth_circle" >
+                <div id="moda_circles2" style="position:absolute;top:70%;left:17%">
+                <p id="arctxt1" style="display:block" class="inez-text">
+                    <?php
+                        $data->setArticle(23);
+                        $data->article->writeTitle();
+                    ?>
                 </p>
                 </div>
                 <div class="overlay-moda-circle">
                     <img src="resources/img/harry.jpg" width="179" height="189" class="overlay-moda-img" />
                 </div>
             </div>  
-            <div class="column_one_fourth" >
-                <div style="position:absolute;top:70%;left:17%">
-                <p id="arctxt" style="display:block" class="inez-text">
-                    Lorem Ipsum
+            <div id="moda_circle3" class="column_one_fourth_circle_last" >
+                <div id="moda_circles3" style="position:absolute;top:70%;left:17%">
+                <p id="arctxt2" style="display:block" class="inez-text">
+                    <?php
+                        $data->setArticle(23);
+                        $data->article->writeTitle();
+                    ?>  
                 </p>
                 </div>
                 <div class="overlay-moda-circle">
@@ -543,7 +571,7 @@ $data->setCategory("La moda que no incomoda");
 <!--end footer-->
 
 <!-- Scripts -->
-<script type='text/javascript' src='js/site/jquery-ui-1.9.0.custom.min.js'></script>
+<!--<script type='text/javascript' src='js/site/jquery-ui-1.9.0.custom.min.js'></script>-->
 <script type='text/javascript' src='js/site/jquery.mobile-touch-swipe-1.0.js'></script>
 <script type='text/javascript' src='js/site/iOS-timer.js'></script>
 <script type='text/javascript' src='js/site/jquery.easing.1.3.js'></script>
@@ -551,13 +579,13 @@ $data->setCategory("La moda que no incomoda");
 <script type='text/javascript' src='js/site/jquery.flexslider-min-edited.js'></script>
 <script type='text/javascript' src='js/site/waypoints.min.js'></script>
 <script type='text/javascript' src='js/site/jquery.parallax-1.1.3.js'></script>
-<script type='text/javascript' src='js/site/jquery.ajaxloading.js'></script>
+<!--<script type='text/javascript' src='js/site/jquery.ajaxloading.js'></script>-->
 <script type='text/javascript' src='js/site/is-mobile.js'></script>
 <script type='text/javascript' src='js/site/settings.js'></script>
 <script type='text/javascript' src='js/site/onepage.js'></script>
 <script type='text/javascript' src='js/site/jquery.fancybox-1.3.4.js'></script>
 <script type='text/javascript' src='js/site/jquery.metadata.js'></script>
-<script type='text/javascript' src='js/site/common.js'></script>
+<!--<script type='text/javascript' src='js/site/common.js'></script>-->
 <script type='text/javascript' src='js/site/udt_shortcodes.js'></script>
 <script type='text/javascript' src='js/site/contact.js'></script>
 <script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?sensor=false'></script>
@@ -584,15 +612,39 @@ jQuery(document).ready(function($) {
     var $arctxt	= $('#arctxt');
     $arctxt.arctext({radius: 400, dir: -1})
     
+    var $tt = $('#tt0');
+    $tt.arctext({radius: 15, dir:1})
+    
+    var $tt = $('#tt');
+    $tt.arctext({radius: 15, dir:1})
+    
     var $arctxt1 = $('#arctxt1');
-    $arctxt1.arctext({radius: 150, dir:1})
+    $arctxt1.arctext({radius: 15, dir:1})
     
     var $arctxt2 = $('#arctxt2');
-    $arctxt2.arctext({radius: 150, dir:1})
+    $arctxt2.arctext({radius: 15, dir:1})
     
-	/*$('area').on('click', function() {
-		alert($(this).attr('alt') + ' clicked');
-	});*/
+    var $ww = jQuery("#moda_circle0").height()/-31.0; 
+    jQuery("#moda_circles0").css({
+   'top' : jQuery("#moda_circle0").height()/3.96 + '%',
+   'left': $ww + 2 + '%' 
+    });
+    
+    jQuery("#moda_circles1").css({
+   'top' : jQuery("#moda_circle1").height()/3.93 + '%',
+   'left': $ww + 30 +'%' 
+    });
+    
+    jQuery("#moda_circles2").css({
+   'top' : jQuery("#moda_circle2").height()/3.93 + '%',
+   'left': $ww + 56 + '%' 
+    });
+    
+    jQuery("#moda_circles3").css({
+   'top' : jQuery("#moda_circle3").height()/3.93 + '%',
+   'left': $ww + 83 + '%' 
+    });
+
     
 });
 </script>
