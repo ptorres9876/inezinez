@@ -3,11 +3,12 @@
 /* default*/
 html
 {
-    background: url(../../resources/img/welcome_fondo-01.png) no-repeat center center fixed; 
+    /*background: url(../../resources/img/welcome_fondo-01.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover;*/
+	background : #c1e3dd;
 }
 
 
@@ -88,4 +89,12 @@ a:hover
 a:visited , a:active, a:link, a
 {
     color:darkgray;
+}
+
+#bgimg
+{
+	position:absolute;
+	width:50%;
+	top:10%;
+	left:25%;
 }
