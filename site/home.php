@@ -46,7 +46,8 @@ $data->setCategory("La moda que no incomoda");
 <script type="text/javascript" src="js/sliders/jssor.js"></script>
 <script type="text/javascript" src="js/sliders/jssor.slider.js"></script>
 <script type="text/javascript" src="js/arctext/jquery.arctext.js"></script>
-
+    
+    
 <script type="text/javascript">
 	jQuery('head').append('<style>#wrapper, #footer{display:none;}</style>');
     jQuery(window).resize(function() {
@@ -58,7 +59,7 @@ $data->setCategory("La moda que no incomoda");
         jQuery('div.s1-caption').css({"top": aspect + "%"});
         
         
-        var $ww = jQuery("#moda_circle0").height()/-31.0; 
+        /*var $ww = jQuery("#moda_circle0").height()/-31.0; 
     jQuery("#moda_circles0").css({
    'top' : jQuery("#moda_circle0").height()/3.96 + '%',
    'left': $ww + 2 + '%' 
@@ -77,7 +78,7 @@ $data->setCategory("La moda que no incomoda");
     jQuery("#moda_circles3").css({
    'top' : jQuery("#moda_circle3").height()/3.93 + '%',
    'left': $ww + 83 + '%' 
-    });
+    });*/
     });
     jQuery(document).ready(function($) {
       var _SlideshowTransitions = [
@@ -138,6 +139,8 @@ $data->setCategory("La moda que no incomoda");
             $(window).bind("load", ScaleSlider);
             $(window).bind("resize", ScaleSlider);
             $(window).bind("orientationchange", ScaleSlider);
+        
+        
     });
     
 </script>
@@ -188,6 +191,10 @@ $data->setCategory("La moda que no incomoda");
     <div>
         <div>
 	   <div class="section1-bg">
+           <div id="air" style="position:absolute;">
+               <img id="airinez" src="resources/Layout/inezwillis_viento.png" />
+               <canvas id="canvas"/>
+           </div>
             <img src="resources/Layout/fondogrande.png" alt="" usemap="#Map" />
             <map name="Map" id="Map">
                 <area alt="" title="" href="#" shape="poly" coords="338,939,341,960,377,962,374,940" />
@@ -223,60 +230,66 @@ $data->setCategory("La moda que no incomoda");
             </div>
            
             <div style="margin-top:5%">
-            <div id="moda_circle0" class="column_one_fourth_circle_first" >
-                <div id="moda_circles0" style="position:absolute;top:70%;left:17%">
-                <p  id="tt0" style="display:block" class="inez-text">
-                    <?php
-                        $data->setArticle(22);
-                        trim($data->article->writeTitle());
-                    ?>
-                </p>
-                </div>
+            
+                
+            <?php $data->setArticle(22); $data->setImgPath();?>
+            <div id="moda_circle0" style="position:relative" class="column_one_fourth_circle_first" >
                 <div class="overlay-moda-circle">
-                    <?php
-                        $data->setImgPath();
-                        
-                    ?>
                     <img src="<?php $data->article->writeImg(); ?>" width="179" height="189" class="overlay-moda-img" />
+                    <div id="moda_circles0" style="position:absolute;top:68%;left:-10%">
+                        <p id="arctxt1" style="display:block" class="inez-text title">
+                            <?php
+                                
+                                trim($data->article->writeTitle());
+                            ?>
+                        </p>
+                    </div>
+                </div>
+            </div>    
+                
+            <?php $data->setArticle(23); $data->setImgPath();?>
+            <div id="moda_circle1" style="position:relative" class="column_one_fourth_circle" >
+                <div class="overlay-moda-circle">
+                    <img src="resources/img/harry.jpg" width="179" height="189" class="overlay-moda-img" />
+                    <div id="moda_circles1" style="position:absolute;top:68%;left:-10%">
+                        <p id="arctxt2" style="display:block" class="inez-text title">
+                            <?php
+                                
+                                trim($data->article->writeTitle());
+                            ?>
+                        </p>
+                    </div>
+                </div>
+            </div> 
+                
+            
+            <?php $data->setArticle(23); $data->setImgPath();?>
+            <div id="moda_circle2" style="position:relative" class="column_one_fourth_circle" >
+                <div class="overlay-moda-circle">
+                    <img src="resources/img/harry.jpg" width="179" height="189" class="overlay-moda-img" />
+                    <div id="moda_circles2" style="position:absolute;top:68%;left:-10%">
+                        <p id="arctxt3" style="display:block" class="inez-text title">
+                            <?php
+                                
+                                trim($data->article->writeTitle());
+                            ?>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div id="moda_circle1" class="column_one_fourth_circle" >
-                <div id="moda_circles1" style="position:absolute;top:70%;left:17%">
-                <p  id="tt" style="display:block" class="inez-text">
-                    <?php
-                        $data->setArticle(23);
-                        $data->article->writeTitle();
-                    ?>
-                </p>
-                </div>
+                
+            <?php $data->setArticle(23); $data->setImgPath();?>
+            <div id="moda_circle3" style="position:relative" class="column_one_fourth_circle_last" >
                 <div class="overlay-moda-circle">
                     <img src="resources/img/harry.jpg" width="179" height="189" class="overlay-moda-img" />
-                </div>
-            </div>
-            <div id="moda_circle2" class="column_one_fourth_circle" >
-                <div id="moda_circles2" style="position:absolute;top:70%;left:17%">
-                <p id="arctxt1" style="display:block" class="inez-text">
-                    <?php
-                        $data->setArticle(23);
-                        $data->article->writeTitle();
-                    ?>
-                </p>
-                </div>
-                <div class="overlay-moda-circle">
-                    <img src="resources/img/harry.jpg" width="179" height="189" class="overlay-moda-img" />
-                </div>
-            </div>  
-            <div id="moda_circle3" class="column_one_fourth_circle_last" >
-                <div id="moda_circles3" style="position:absolute;top:70%;left:17%">
-                <p id="arctxt2" style="display:block" class="inez-text">
-                    <?php
-                        $data->setArticle(23);
-                        $data->article->writeTitle();
-                    ?>  
-                </p>
-                </div>
-                <div class="overlay-moda-circle">
-                    <img src="resources/img/harry.jpg" width="179" height="189" class="overlay-moda-img" />
+                    <div id="moda_circles3" style="position:absolute;top:68%;left:-10%">
+                        <p id="arctxt4" style="display:block" class="inez-text title">
+                            <?php
+                                
+                                trim($data->article->writeTitle());
+                            ?>
+                        </p>
+                    </div>
                 </div>
             </div>
             </div>
@@ -351,7 +364,7 @@ $data->setCategory("La moda que no incomoda");
             }
         </style>
         <!-- bullet navigator container -->
-        <div u="navigator" class="jssorb05" style="position: absolute; bottom: 16px; right: 6px;">
+        <div u="navigator" class="jssorb05" style="position: absolute; bottom: 0px; right: 6px;">
             <!-- bullet navigator item prototype -->
             <div u="prototype" style="POSITION: absolute; WIDTH: 16px; HEIGHT: 16px;"></div>
         </div>
@@ -590,6 +603,7 @@ $data->setCategory("La moda que no incomoda");
 <script type='text/javascript' src='js/site/contact.js'></script>
 <script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?sensor=false'></script>
     
+    
 <script src="js/site/maps/jquery.maps.min.js"></script>
 <script>
 jQuery(document).ready(function($) {
@@ -613,41 +627,130 @@ jQuery(document).ready(function($) {
     $arctxt.arctext({radius: 400, dir: -1})
     
     var $tt = $('#tt0');
-    $tt.arctext({radius: 15, dir:1})
+    $tt.arctext({radius: 150, dir:1})
     
     var $tt = $('#tt');
-    $tt.arctext({radius: 15, dir:1})
+    $tt.arctext({radius: 150, dir:1})
     
     var $arctxt1 = $('#arctxt1');
-    $arctxt1.arctext({radius: 15, dir:1})
+    $arctxt1.arctext({radius: 150, dir:1})
     
     var $arctxt2 = $('#arctxt2');
-    $arctxt2.arctext({radius: 15, dir:1})
+    $arctxt2.arctext({radius: 150, dir:1})
     
-    var $ww = jQuery("#moda_circle0").height()/-31.0; 
-    jQuery("#moda_circles0").css({
-   'top' : jQuery("#moda_circle0").height()/3.96 + '%',
-   'left': $ww + 2 + '%' 
-    });
+    var $arctxt3 = $('#arctxt3');
+    $arctxt3.arctext({radius: 150, dir:1})
     
-    jQuery("#moda_circles1").css({
+    var $arctxt4 = $('#arctxt4');
+    $arctxt4.arctext({radius: 150, dir:1})
+    
+    /*jQuery("#moda_circles0").css({
+   'top' : jQuery("#moda_circle0").height() * 0.8044 + 'px',
+   'left': jQuery("#moda_circle0").width() * 0.1111 + 'px' 
+    });*/
+    
+    /*jQuery("#moda_circles1").css({
    'top' : jQuery("#moda_circle1").height()/3.93 + '%',
    'left': $ww + 30 +'%' 
-    });
+    });*/
     
-    jQuery("#moda_circles2").css({
+    /*jQuery("#moda_circles2").css({
    'top' : jQuery("#moda_circle2").height()/3.93 + '%',
    'left': $ww + 56 + '%' 
-    });
+    });*/
     
-    jQuery("#moda_circles3").css({
+    /*jQuery("#moda_circles3").css({
    'top' : jQuery("#moda_circle3").height()/3.93 + '%',
    'left': $ww + 83 + '%' 
-    });
-
+    });*/
     
 });
 </script>
 
+    
+<script>
+jQuery(document).ready(function($) {
+	
+    var $div = jQuery('#air');
+    var $canvas = document.getElementById("canvas");
+    var $ship = $div.find('img');
+    var ctx = $canvas.getContext("2d");
+   
+    
+    stop();
+        
+    function stop() {
+        $ship.stop();
+        ctx.closePath();
+        ctx.stroke();
+        ctx.clearRect(0, 0, $canvas.width, $canvas.height);
+    }
+    var x = 0.0;
+    
+    image=$('#airinez');
+    steps=20;
+	boxWidth=image.width()/steps;
+	boxHeight=image.height()/steps;
+	
+	image.wrap('<div />');
+	container=image.parent();
+	container.width(image.width());
+	container.height(image.height());
+	container.css('position','relative');
+
+	bits=new Array();	
+	c=0;
+	for(yl=0;yl<steps;yl++){
+		for(xl=0;xl<steps;xl++){
+			bit=$('<div />');
+			x1=xl*boxWidth;
+			y1=yl*boxHeight;
+			x2=x1+boxWidth;
+			y2=y1+boxHeight;
+			url='url("'+image.attr('src')+'")';
+			pos=-x1+'px '+(-y1)+'px';
+      bit.css({position:'absolute','background-image':url,width:boxWidth,height:boxHeight,'background-position':pos,display:'block'});
+      bit.css({transform: 'translate('+x1+'px, '+y1+'px)'});
+			bits[c++]=bit;
+			container.append(bit);
+		}
+	}
+	image.remove();
+	
+	counter=0;
+	function flag(){
+		b=counter
+		c=0
+		for(yl=0;yl<steps;yl++){
+			a=b
+			for(xl=0;xl<steps;xl++){
+				px=xl*boxWidth;
+				py=yl*boxHeight;
+				px=px+(Math.cos(a)*10)-(xl*2);
+				py=py+(Math.sin(a)*6)-(yl*2);
+        bits[c++].css({transform: 'translate('+px+'px, '+py+'px)'});
+				a=a+0.2;
+			}
+			b=b+0.2
+		}
+		counter=counter+0.3;
+	}
+    
+    dx = 0.0;
+    function move(){
+        dy = $(".section1-bg").height() * 0.80;
+		dx =  dx < $( window ).width()-152.0 ? dx + 5.0 : 0.0;
+        $div.css({transform: 'translate('+dx+'px,' +dy +'px)'});
+	}
+	
+	flag();
+	setInterval(flag,50);
+    move();
+    setInterval(move,50);
+    
+    
+});
+</script>    
+    
 </body>
 </html>

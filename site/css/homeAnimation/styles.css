@@ -3,24 +3,29 @@
 /* default*/
 html
 {
-    /*background: url(../../resources/img/welcome_fondo-01.png) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;*/
-	background : #c1e3dd;
+    background:#c1e3dd;
 }
 
+#bgimg
+{
+    position: absolute;
+    margin-left: -25%;
+    width: 50%;
+    z-index:1;
+    top:12%;
+}
 
 @media only screen and (max-width: 320px) {
     /* Small screen, non-retina */
     body { background-image: url(""); }
+    #bgimg{top:15%}
 }
 
 @media
 only screen and (min-resolution: 2dppx) and (max-width: 320px) {
     /* Small screen, retina */
     body { background-image: url(""); }
+    #bgimg{top:15%}
 }
 
 @media only screen and (min-width: 321px) and (max-width: 538px) {
@@ -53,13 +58,9 @@ body
 {
     position: relative;
     /*border:1px solid;*/
-    height: 50%;/*75*/
+    height: 75%;
     top:25%;
     overflow: hidden;
-}
-
-.canvas1{
-    /*position:absolute;*/
 }
 
 #test img 
@@ -91,10 +92,3 @@ a:visited , a:active, a:link, a
     color:darkgray;
 }
 
-#bgimg
-{
-	position:absolute;
-	width:50%;
-	top:10%;
-	left:25%;
-}

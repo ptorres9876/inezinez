@@ -118,8 +118,8 @@ function tick()
     
     if(stopped)
     {
-        //createjs.Ticker.setPaused(true);
-        //setTimeout (window.location = "index2.html", 2000);
+        createjs.Ticker.setPaused(true);
+        setTimeout (window.location = "home.php", 2000);
         return;
     }
     
@@ -136,19 +136,11 @@ function tick()
     // Bezier Curve
     function animate()
     {
-        //e.preventDefault();
         stop();
        
         tween($.curve.bezier, {
             x: 0,
             y:  $canvas.height,
-            //y = animHeight/2;
-            /*points: [
-                [0, animHeight / 2],
-                [animWidth/2, 0],
-                [animWidth * 0.8, animHeight],
-                [animWidth * 0.9, animHeight/ 2]
-            ]*/
             points: [
                 [0, animHeight / 2],
                 [animWidth * 0.33, animHeight / 2],
@@ -162,8 +154,6 @@ function tick()
     {
         $huellas.stop();
         ctx.closePath();
-        //ctx.stroke();
-        //ctx.clearRect(0, 0, $canvas.width, $canvas.height);
     }
     
     var h = $huellas.height();
@@ -188,9 +178,9 @@ function tick()
         p = curve(fx.pos, opts);
             
         $elem.css({
-                left: (p[0] - w/2 ) + 'px', // re-center the ship
-                top: (p[1] - h/2 ) + 'px', // re-center the ship
-                rotate: (parseFloat(p[2].toFixed(8)) + halfPI) + 'rad'     
+                left: (p[0] - w/2 ) + 'px',
+                top: (p[1] - h/2 ) + 'px'
+                //rotate: (parseFloat(p[2].toFixed(8)) + halfPI) + 'rad'     
         });
         
         
@@ -237,7 +227,7 @@ function tick()
                 delta = 1.0;
         }
             
-        if(p[0] >= animWidth * 0.94 )//0.9
+        if(p[0] >= animWidth  )
         {
             stop();
             stopped = true;
@@ -250,7 +240,7 @@ function tick()
         ctx.globalAlpha = 1.0;    
         
         }, {
-            duration: 20000,
+            duration: 18000,
         });
             
     }

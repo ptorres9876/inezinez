@@ -21,7 +21,6 @@
 		----------------------------*/
 
 		.header .inner .menu ul{display:table !important;}
-        .header .logo-container .logo{left:100%}
 }
 
 @media only screen and (min-width: 960px) and (max-width: 1199px) {
@@ -41,7 +40,6 @@
 
 	/*homepage*/
 	.logo-homepage {background-attachment: inherit; position:absolute;}
-    .header .logo-container .logo{left:100%}
 
 	/*inner pages*/
 	.header {display:block;}
@@ -161,7 +159,6 @@
 	
 	/*homepage*/
 	.logo-homepage {background-attachment: inherit; position:absolute;}
-    .header .logo-container .logo{left:0%}
 
 	/*inner pages*/
 	.header {height:auto;display:block;}
@@ -275,6 +272,11 @@
 	.flexslider {max-width:100% !important;height:auto !important;}
 	
     .s1-caption{position:absolute;left:33%;top:40%;font-family: noconsequence,arial;}
+    
+    
+    /*columns*/
+    .column_one_fourth,.column_one_fourth_circle,.column_one_fourth_circle_first,.column_one_fourth_circle_last
+        {width:45%;}
 }
 
 
@@ -486,6 +488,10 @@
 	.accordion blockquote, .tabs blockquote { width:340px !important; margin-right:0 !important; }
     
     .s1-caption{position:absolute;left:34%;top:36%;font-family: noconsequence,arial;}
+    
+    /*column*/
+    .column_one_fourth,.column_one_fourth_circle,.column_one_fourth_circle_first,.column_one_fourth_circle_last
+        {width:45%;}
 
 }
 
@@ -704,6 +710,10 @@
 	
 	/*tables*/
 	.pricing_table .pricing_table_col > ul > li .submit { -moz-box-sizing: border-box;float: none;padding: 10px 8px; width: 80%;}
+    
+    /*columns*/
+    .column_one_fourth,.column_one_fourth_circle,.column_one_fourth_circle_first,.column_one_fourth_circle_last
+        {width:100%;}
 
 }
 
